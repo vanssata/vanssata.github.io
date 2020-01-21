@@ -5,7 +5,7 @@
 
 <meta name="viewport" content="width=device-width"/>
 <meta name="description" content="CV на Иван Какъров."/>
-<meta charset="UTF-8"> 
+<meta charset="UTF-8">
 
 <link type="text/css" rel="stylesheet" href="style.css">
 <link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
@@ -21,12 +21,12 @@
 		<div id="headshot" class="quickFade">
 			<img src="headshot.jpg" alt="Иван Какърво" />
 		</div>
-		
+
 		<div id="name">
 			<h1 class="quickFade delayTwo">Иван Какъров</h1>
 			<h2 class="quickFade delayThree">Developer</h2>
 		</div>
-		
+
 		<div id="contactDetails" class="quickFade delayFour">
 			<ul>
 				<li>e: <a href="mailto:ivan.kakurov@gmail.com" target="_blank">ivan.kakurov@gmail.com</a></li>
@@ -35,14 +35,14 @@
 		</div>
 		<div class="clear"></div>
 	</div>
-	
+
 	<div id="mainArea" class="quickFade delayFive">
 		<section>
 			<article>
 				<div class="sectionTitle">
 					<h1>За мен</h1>
 				</div>
-				
+
 				<div class="sectionContent">
                     <p>Казвам се Иван Какъров и от 2013 година си изхкарвам прехраната  с разработвaне на сайтове и платформи.</p>
                     <p>Привърженик съм на споделянето на зания и незнания.</p>
@@ -50,27 +50,32 @@
 			</article>
 			<div class="clear"></div>
 		</section>
-		
-		
+
+
 		<section>
 			<div class="sectionTitle">
 				<h1>Профисионален опит</h1>
 			</div>
-			
+
 			<div class="sectionContent">
+                <article>
+                    <h2>FULL STACK DEV </h2>
+                    <p class="subDetails">Август 2019 - до момента</p>
+                    <p>Разработване на вътрешни системи за управление на ресурсите, изграждане на портал за управление на филиялите.  </p>
+                </article>
 				<article>
 					<h2>PHP/MAGENTO dev at  <a href="http://www.beluga.software/" target="_blank" class="sectionContent--link--text"> BelugaIT</a> </h2>
-					<p class="subDetails">Август 2018 - до момента</p>
+					<p class="subDetails">Август 2018 - Август 2019</p>
 					<p>Част от екипа за разработка и подръжка на решния за онлайн търговия. В тясно партньорство с холандската компания
                          <a href="https://www.diract-it.nl/" target='_blank' class="sectionContent--link--text">Diract</a> разрабваме магазини с голямо количество продукти и доста персонализирани изисквания.
                     </p>
 				</article>
-				
+
 				<article>
 					<h2>PHP developer at <a href="http://www.studiox.bg/" class="sectionContent--link--text" target="_blank">StudioX</a></h2>
 					<p class="subDetails">Септември 2015 - Август 2018</p>
 					<p>
-                        Част от PHP екипа за разработвне и подръжка на проектите в СтудиоХ. Проектите на компанията са разнородни, като се използват голямо количество технологии. 
+                        Част от PHP екипа за разработвне и подръжка на проектите в СтудиоХ. Проектите на компанията са разнородни, като се използват голямо количество технологии.
                     </p>
                 </article>
 
@@ -78,13 +83,13 @@
                     <h2>PHP developer at <a href="http://3web.bg/" target="blank" class="sectionContent--link--text"> 3WEB</a> </h2>
 					<p class="subDetails">Юли 2013 - Септември 2015</p>
 					<p>
-                        В тази компания бях част от PHP екипа, с който разрабтвахме предимно малки и средни сайтове и API's.    
+                        В тази компания бях част от PHP екипа, с който разрабтвахме предимно малки и средни сайтове и API's.
                     </p>
 				</article>
 			</div>
 			<div class="clear"></div>
 		</section>
-		
+
 		<section>
                 <div class="sectionTitle">
                     <h1>Cient-Side development</h1>
@@ -94,22 +99,22 @@
                         <h2>Css</h2>
                         <ul class="sites">
                             <li v-for="item in css.frameworks">
-                                <a href="{{ item.link }}" class="sectionContent--link--text" target="_blank">{{ item.title }}</a> 
+                                <a href="{{ item.link }}" class="sectionContent--link--text" target="_blank">{{ item.title }}</a>
                             </li>
                         </ul>
                     </div>
-               
+
                    <div style="float: right; margin-right: 10rem;">
                         <h2>Javascript</h2>
                         <ul class="sites" >
                             <li v-for="item in js.frameworks">
-                                <a href="{{ item.link }}" class="sectionContent--link--text" target="_blank">{{ item.title }}</a> 
+                                <a href="{{ item.link }}" class="sectionContent--link--text" target="_blank">{{ item.title }}</a>
                             </li>
                         </ul>
                    </div>
-                  
+
                 </div>
-                
+
                 <div class="clear"></div>
             </section>
 
@@ -128,10 +133,10 @@
                         </ul>
                 <p>Също така съм работил с доста знайни и незнайни персонализирани решения. </p>
             </div>
-            
+
 			<div class="clear"></div>
         </section>
-        
+
 		<section>
 			<div class="sectionTitle">
 				<h1>Databases</h1>
@@ -153,56 +158,48 @@
                 </div>
                 <div class="sectionContent">
                         <dl>
-                               
-                               
+
+
                                 <dt><a href="https://bigmarket.bg/" class="sectionContent--link--text" target="_blank">BigMarket</a></dt>
                                 <dd>Огромен магазин, с излючитено сериозни промени по основанта фунционалност на Magento2. На практика продуктите в магазина идват в рялно време от над 10 склада</dd>
-                          
+
                                 <dt><a href="https://www.officemarket.bg/" class="sectionContent--link--text" target="_blank">OfficeMarket</a></dt>
                                 <dd>Огромен магазин, с излючитено сериозни промени по основанта фунционалност на Magento2. <br/>
                                     Тук има реализирани модули който променят изцяло поведениото на платформата при пазаруване. <br/>
-                                    Изключително гъвкъв бизнес модел, който се съобразява с изискванията на клитентите на магазина, за оправление на техните компании. 
+                                    Изключително гъвкъв бизнес модел, който се съобразява с изискванията на клитентите на магазина, за оправление на техните компании.
                                 </dd>
-                               
+
                                 <dt><a href="http://eabct2018.org/" class="sectionContent--link--text" target="_blank">Eabct 2018</a></dt>
                                 <dd>СПА сайт изграден с JQuery и html render calls.</dd>
-                               
+
                                 <dt><a href="http://tramplin.zrock.bg" class="sectionContent--link--text" target="_blank">Tramplin Zrock</a></dt>
                                 <dd>Сайт за качване на парчета и гласуване, сайта е хибрид между SPA и нормален каталог. SPA-то е реализирано само с jquery</dd>
-                               
-                                <dt><a href="http://www.solvex.bg " class="sectionContent--link--text" target="_blank">Solvex</a></dt>
+
+                                <dt><a href="http://www.b2b.solvex.bg " class="sectionContent--link--text" target="_blank"> B2B Solvex</a></dt>
                                 <dd>
                                     B2B/B2C сайт за създаване и менажиране на хотели, сайта също така има реализиране боокинг ситема, в която има над 1200 хотела.
                                     На ден минава през сайта се обработват около 50GB данни който идват от SOAP сървиз.
                                 </dd>
-                               
+
                                 <dt><a href="https://indeavr.com " class="sectionContent--link--text" target="_blank">Indeavr</a></dt>
                                 <dd>Корпоративен сайт на Indeavr</dd>
-                               
-                                <dt><a href=" http://coloreffect.bg" class="sectionContent--link--text" target="_blank">Тhelearningedge</a></dt>
+
+                                <dt><a href=" http://coloreffect.bg" class="sectionContent--link--text" target="_blank">Color Effect</a></dt>
                                 <dd>леко сайтче с дота интересни обработки на снимките</dd>
-                               
-                                <dt><a href=" https://www.nippon.bg/" class="sectionContent--link--text" target="_blank">Тhelearningedge</a></dt>
+
+                                <dt><a href=" https://www.nippon.bg/" class="sectionContent--link--text" target="_blank">Nippon BG</a></dt>
                                 <dd>Сериозен магазин в койт с една администрация се опрваляват 6 магазина. Създаден е персонализиран FW</dd>
-                               
+
                                 <dt><a href="http://thelearningedge.net/" class="sectionContent--link--text" target="_blank">Тhelearningedge</a></dt>
                                 <dd>Презантеционен сайт на който се създаваше фирмен фреймуорк на SF2</dd>
-                               
+
                                 <dt><a href="https://www.babytown.bg" class="sectionContent--link--text" target="_blank">Babytown</a></dt>
                                 <dd>Доста голям магазин, създаден от нулата</dd>
-                               
-                                <dt><a href="http://deadsocial.org/ - Joomla Jsocial" class="sectionContent--link--text" target="_blank">Dead Social</a></dt>
-                                <dd>Joomla Social - доста персонализирани модули</dd>
-                               
-                               
+
+
+
                                 <dt><a href="http://www.glassdove.com/" class="sectionContent--link--text" target="_blank">Glassdove</a></dt>
                                 <dd>Доста приятен ли лек сайт за сувенири от стъкло</dd>
-                               
-                                <dt><a href="https://evolir.com/" class="sectionContent--link--text" target="_blank">Evolir</a></dt>
-                                <dd>Сайт календар за менажиране на фитнес програми,инструктури<br/> Много сложна система за създаване,привеждане и отчитане на различни дейности свързани с фитнес</dd>
-                        
-                                <dt><a href="https://vimeo.com/87457774" class="sectionContent--link--text" target="_blank">Roomhunters</a></dt>
-                                <dd>Cайт за отдаване на стаии и импоти в Лондон.<br/> Техничски в сайта имаше доста сложни алгоритми за взимане на данни от Google Maps.</dd>
                         </dl>
                     <p>Участвал съм в подръжката на много сайтове, различни като технолгии и цели някой от тях са: </p>
                     <ul class="sites">
@@ -213,7 +210,6 @@
                             <li><a href="https://www.klimaticite.bg/ " class="sectionContent--link--text" target="_blank">Klimaticite</a></li>
                             <li><a href="https://www.carmen.bg/" class="sectionContent--link--text" target="_blank">Carmen</a></li>
                             <li><a href="https://www.farfisa.bg/" class="sectionContent--link--text" target="_blank">Farfisa</a></li>
-                            <li><a href="http://www.sogelife.bg/" class="sectionContent--link--text" target="_blank">Sogelife</a></li>
                             <li><a href="https://www.arteks.net/" class="sectionContent--link--text" target="_blank">Arteks</a></li>
                             <li><a href="https://iandgbrokers.com/bg " class="sectionContent--link--text" target="_blank">iandgbrokers</a></li>
                             <li><a href="https://www.ktinternational.eu/" class="sectionContent--link--text" target="_blank">ktinternational</a></li>
@@ -223,6 +219,6 @@
             </section>
 	</div>
 </div>
-<script src="/js/app.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
