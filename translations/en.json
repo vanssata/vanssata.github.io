@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "lang": "en",
+    "title": "Ivan Kakurov – Senior PHP Developer"
+  },
+  "nav": {
+    "download": "Download CV",
+    "darkMode": "Dark mode",
+    "lightMode": "Light mode"
+  },
+  "sections": {
+    "contacts": "Contacts",
+    "experience": "Work Experience",
+    "education": "Education",
+    "languages": "Languages",
+    "skills": "Skills",
+    "projects": "Projects",
+    "references": "References"
+  },
+  "personal": {
+    "name": "Ivan Jordanov Kakurov",
+    "tagline": "Senior PHP Developer · Full-Stack Engineer",
+    "dob": "17.01.1987",
+    "gender": "Male",
+    "location": "Sofia, Bulgaria",
+    "relocation": "Open to relocation within Bulgaria",
+    "email": "ivan.kakurov@gmail.com",
+    "phone": "+359 882 647 071",
+    "github": "https://github.com/vanssata"
+  },
+  "languages": [
+    { "name": "Bulgarian", "level": "Native" },
+    { "name": "English", "level": "Intermediate" }
+  ],
+  "experience": [
+    {
+      "period": "August 2019 – present",
+      "role": "Senior PHP Developer",
+      "company": "Abrites LTD",
+      "companyUrl": "https://abrites.com",
+      "location": "Sofia",
+      "sector": "Automotive, auto services, gas stations",
+      "size": "50–100 employees",
+      "description": [
+        "Full-stack developer responsible for designing, developing, and maintaining complex business solutions across multiple platforms. The flagship project is the global e-commerce platform at abrites.com — serving 4 independent legal entities across different jurisdictions worldwide, supporting international trade with a highly customized product catalog, order pipeline, and per-client dynamic pricing engine that allows individual customers to hold multiple price lists for the same item, updated in near-real-time to reflect market and business conditions.",
+        "The platform integrates 15 payment providers, 8 of which I designed and implemented from scratch to meet specific regional and business requirements. It operates across 3 different ERP systems simultaneously and supports 4 legal departments with distinct compliance, invoicing, and reporting needs. The sales model is fully custom — built around the unique pricing and business logic of the global automotive diagnostics industry.",
+        "Data integrity is a core responsibility: I design and execute ETL pipelines to migrate, validate, normalize, and consolidate data arriving from multiple external sources, ensuring consistency across all connected systems. This includes large-scale legacy data migrations and ongoing synchronization between heterogeneous platforms.",
+        "Beyond e-commerce, I maintain and extend: an internal ERP/CRM (Python / Django + PostgreSQL), a custom CMS, an event management system (Django + SQLite), and 4 OpenCart 1.4 storefronts. I also lead CI/CD pipeline design (GitLab CI, bash scripting), REST API development (Django REST Framework + Swagger), and integration with the Dolibarr ERP system."
+      ]
+    },
+    {
+      "period": "August 2018 – August 2019",
+      "role": "PHP Developer",
+      "company": "Beluga",
+      "location": "Sofia",
+      "sector": "Internet / E-commerce",
+      "size": "10–20 employees",
+      "description": [
+        "Worked on large and complex e-commerce projects using Magento (Adobe Commerce). Delivered customizations on core functionality, developed custom B2B modules and processes, and redesigned the checkout and invoicing pipeline."
+      ]
+    },
+    {
+      "period": "September 2015 – August 2018",
+      "role": "PHP Developer",
+      "company": "Studiox",
+      "location": "Sofia",
+      "sector": "Internet / E-commerce",
+      "size": "20–50 employees",
+      "description": [
+        "Developed and maintained a wide range of projects varying in scale and complexity — from small landing pages for local businesses to complex systems for banks and insurance companies. Built custom e-commerce solutions from scratch."
+      ]
+    },
+    {
+      "period": "April 2013 – August 2015",
+      "role": "PHP Developer",
+      "company": "3web.bg",
+      "location": "Plovdiv",
+      "sector": "Internet / E-commerce",
+      "size": "10–20 employees",
+      "description": [
+        "Worked on a variety of small to mid-scale websites and APIs."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "period": "September 1995 – May 2006",
+      "institution": "Hr. Danov",
+      "location": "Plovdiv",
+      "level": "Secondary school"
+    }
+  ],
+  "skills": {
+    "backend": {
+      "title": "Backend",
+      "groups": [
+        { "label": "Languages", "items": ["PHP", "Python", "Bash", "JavaScript"] },
+        { "label": "Frameworks", "items": ["Symfony", "API Platform", "Laravel", "CodeIgniter", "Zend Framework 2", "Doctrine", "Django"] },
+        { "label": "CMS", "items": ["WordPress", "Joomla", "DjangoCMS"] },
+        { "label": "E-commerce", "items": ["Sylius", "Magento 2", "Shopware", "OpenCart"] },
+        { "label": "Database", "items": ["MySQL", "MariaDB", "PerconaDB", "SQLite", "Redis"] },
+        { "label": "Caching & Queuing", "items": ["PSR-6", "Varnish", "RabbitMQ", "AMQP"] }
+      ]
+    },
+    "frontend": {
+      "title": "Frontend",
+      "groups": [
+        { "label": "JavaScript", "items": ["jQuery", "Vue.js", "React", "Alpine.js", "@hotwired/Stimulus", "@hotwired/Turbo", "KnockoutJS"] },
+        { "label": "CSS / Build", "items": ["SCSS", "Bootstrap 5", "Semantic UI", "Bulma", "webpack", "yarn"] }
+      ]
+    },
+    "devops": {
+      "title": "DevOps & CI/CD",
+      "groups": [
+        { "label": "Containers", "items": ["Docker", "Docker Compose", "Docker Swarm"] },
+        { "label": "CI/CD", "items": ["GitLab CI", "Bash scripting"] }
+      ]
+    },
+    "ai": {
+      "title": "AI & Developer Tools",
+      "groups": [
+        { "label": "AI Code Assistants", "items": ["GitHub Copilot (Codex)", "Anthropic Claude"] },
+        { "label": "Approach", "items": ["Strong focus on problem analysis and solution design; experienced in breaking down complex business requirements into precise technical solutions, and in leveraging AI tooling to architect and implement features independently and efficiently."], "paragraph": true }
+      ]
+    }
+  },
+  "projects": [
+    {
+      "url": "https://breezy-bg.com",
+      "name": "breezy-bg.com",
+      "description": "Shopware 6.5 e-commerce platform. Developed custom modules to replace and extend the core cart and checkout concept. Implemented independently using AI-assisted development (Codex / Claude). Optimized for Bulgarian e-commerce law compliance."
+    },
+    {
+      "url": "https://abrites.com",
+      "name": "abrites.com",
+      "description": "Global automotive diagnostics e-commerce platform. See Abrites LTD in Work Experience for full detail."
+    },
+    { "url": "https://bigmarket.bg/", "name": "bigmarket.bg" },
+    { "url": "https://officemarket.bg/", "name": "officemarket.bg" },
+    { "url": "https://hermesbooks.bg/", "name": "hermesbooks.bg" },
+    { "url": "https://www.nippon.bg", "name": "nippon.bg" },
+    { "url": "https://thelearningedge.net", "name": "thelearningedge.net" },
+    { "url": "https://coloreffect.bg", "name": "coloreffect.bg" },
+    { "url": "https://b2b.solvex.bg", "name": "b2b.solvex.bg" },
+    { "url": "https://reynaers-rock-tramplin.zrockradio.bg/", "name": "reynaers-rock-tramplin.zrockradio.bg" },
+    { "url": "https://ndk.bg/", "name": "ndk.bg" },
+    { "url": "https://arteks.net", "name": "arteks.net" },
+    { "url": "https://www.bittel.bg", "name": "bittel.bg" },
+    { "url": "https://indeavr.com", "name": "indeavr.com" }
+  ],
+  "references": "Available upon request."
+}
