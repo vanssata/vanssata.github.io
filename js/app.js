@@ -124,28 +124,7 @@ createApp({
     });
 
     function downloadPDF() {
-      const el = document.getElementById("cv-content");
-      const filename = `Ivan_Kakurov_CV_${lang.value.toUpperCase()}.pdf`;
-      html2pdf()
-        .set({
-          margin: [8, 8, 8, 8],
-          filename,
-          image: { type: "jpeg", quality: 0.98 },
-          html2canvas: {
-            scale: 2,
-            useCORS: true,
-            onclone(clonedDoc) {
-              clonedDoc.documentElement.setAttribute("data-bs-theme", "light");
-              clonedDoc
-                .querySelectorAll(".print-hidden")
-                .forEach((el) => (el.style.display = "none"));
-            },
-          },
-          jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
-          pagebreak: { mode: ["avoid-all", "css"] },
-        })
-        .from(el)
-        .save();
+      window.print();
     }
 
     return { lang, darkMode, t, loading, keySkills, downloadPDF, ICON_MAP };
