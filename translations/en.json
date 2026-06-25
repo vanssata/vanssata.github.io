@@ -20,7 +20,7 @@
   "personal": {
     "name": "Ivan Jordanov Kakurov",
     "tagline": "Senior PHP Developer · Full-Stack Engineer",
-    "dob": "17.01.1987",
+    "dob": "17.02.1987",
     "gender": "Male",
     "location": "Sofia, Bulgaria",
     "relocation": "Open to relocation within Bulgaria",
@@ -39,19 +39,21 @@
       "company": "Abrites LTD",
       "companyUrl": "https://abrites.com",
       "location": "Sofia",
-      "sector": "Automotive, auto services, gas stations",
-      "size": "50–100 employees",
+      "sector": "Automotive, auto services",
+      "size": "150–200 employees",
       "description": [
-        "Full-stack developer responsible for designing, developing, and maintaining complex business solutions across multiple platforms. The flagship project is the global e-commerce platform at abrites.com — serving 4 independent legal entities across different jurisdictions worldwide, supporting international trade with a highly customized product catalog, order pipeline, and per-client dynamic pricing engine that allows individual customers to hold multiple price lists for the same item, updated in near-real-time to reflect market and business conditions.",
-        "The platform integrates 15 payment providers, 8 of which I designed and implemented from scratch to meet specific regional and business requirements. It operates across 3 different ERP systems simultaneously and supports 4 legal departments with distinct compliance, invoicing, and reporting needs. The sales model is fully custom — built around the unique pricing and business logic of the global automotive diagnostics industry.",
-        "Data integrity is a core responsibility: I design and execute ETL pipelines to migrate, validate, normalize, and consolidate data arriving from multiple external sources, ensuring consistency across all connected systems. This includes large-scale legacy data migrations and ongoing synchronization between heterogeneous platforms.",
-        "Beyond e-commerce, I maintain and extend: an internal ERP/CRM (Python / Django + PostgreSQL), a custom CMS, an event management system (Django + SQLite), and 4 OpenCart 1.4 storefronts. I also lead CI/CD pipeline design (GitLab CI, bash scripting), REST API development (Django REST Framework + Swagger), and integration with the Dolibarr ERP system."
+        "Built and maintained the global e-commerce platform at abrites.com, serving 4 independent legal entities with per-client dynamic pricing and 15 integrated payment providers — 8 implemented from scratch to meet specific regional requirements.",
+         "",
+        "Designed and implemented data validation and normalization logic across heterogeneous external sources, including resolution of entity relationships without direct contextual links between divergent ERP schemas.",
+        "",
+        "Maintained internal ERP/CRM (Python/Django + PostgreSQL), custom Symfony-based CMS, event management system, REST API (Django REST Framework + Swagger), CI/CD (GitLab CI), and Dolibarr ERP integration."
       ]
     },
     {
       "period": "August 2018 – August 2019",
       "role": "PHP Developer",
       "company": "Beluga",
+      "companyUrl": "https://beluga.software/",
       "location": "Sofia",
       "sector": "Internet / E-commerce",
       "size": "10–20 employees",
@@ -128,25 +130,72 @@
     {
       "url": "https://breezy-bg.com",
       "name": "breezy-bg.com",
-      "description": "Shopware 6.5 e-commerce platform. Developed custom modules to replace and extend the core cart and checkout concept. Implemented independently using AI-assisted development (Codex / Claude). Optimized for Bulgarian e-commerce law compliance."
+      "description": "Shopware 6.5 e-commerce platform with custom modules replacing the core cart and checkout concept. Developed independently using AI-assisted tooling (Codex / Claude). Optimized for Bulgarian e-commerce law compliance."
     },
     {
       "url": "https://abrites.com",
       "name": "abrites.com",
-      "description": "Global automotive diagnostics e-commerce platform. See Abrites LTD in Work Experience for full detail."
+      "description": "Global automotive diagnostics e-commerce platform — see Abrites LTD in Work Experience for full detail."
     },
-    { "url": "https://bigmarket.bg/", "name": "bigmarket.bg" },
-    { "url": "https://officemarket.bg/", "name": "officemarket.bg" },
-    { "url": "https://hermesbooks.bg/", "name": "hermesbooks.bg" },
-    { "url": "https://www.nippon.bg", "name": "nippon.bg" },
-    { "url": "https://thelearningedge.net", "name": "thelearningedge.net" },
-    { "url": "https://coloreffect.bg", "name": "coloreffect.bg" },
-    { "url": "https://b2b.solvex.bg", "name": "b2b.solvex.bg" },
-    { "url": "https://reynaers-rock-tramplin.zrockradio.bg/", "name": "reynaers-rock-tramplin.zrockradio.bg" },
-    { "url": "https://ndk.bg/", "name": "ndk.bg" },
-    { "url": "https://arteks.net", "name": "arteks.net" },
-    { "url": "https://www.bittel.bg", "name": "bittel.bg" },
-    { "url": "https://indeavr.com", "name": "indeavr.com" }
-  ],
-  "references": "Available upon request."
+    {
+      "url": "https://bigmarket.bg/",
+      "name": "bigmarket.bg",
+      "description": "B2B wholesale platform for stationery and office supplies built on Magento 2, serving distributors with real-time inventory from 10+ warehouses."
+    },
+    {
+      "url": "https://joya.bg/",
+      "name": "officemarket.bg / joya.bg",
+      "description": "Retail e-commerce for office and stationery products (sister site to BigMarket) built on Magento 2 with a heavily customized B2B/B2C business model."
+    },
+    {
+      "url": "https://hermesbooks.bg/",
+      "name": "hermesbooks.bg",
+      "description": "Online bookstore for Hermes — Bulgaria's largest bookstore chain with 12 nationwide locations — built on Magento 2 with books, stationery, and cultural events."
+    },
+    {
+      "url": "https://www.nippon.bg",
+      "name": "nippon.bg",
+      "description": "E-commerce site for the Nippon brand (solar collectors, air conditioners, intercom systems) — a Bulgarian brand owned and distributed by Bittel Ltd across Europe."
+    },
+    {
+      "url": "https://thelearningedge.net",
+      "name": "thelearningedge.net",
+      "description": "Corporate presentation site built as a showcase for a custom Symfony 2 in-house framework."
+    },
+    {
+      "url": "https://coloreffect.bg",
+      "name": "coloreffect.bg",
+      "description": "Interior design company specializing in luxury solar shading systems for windows and facades."
+    },
+    {
+      "url": "https://b2b.solvex.bg",
+      "name": "b2b.solvex.bg",
+      "description": "B2B/B2C hotel booking and management platform with 1,200+ hotels and ~50 GB/day of real-time data processed from SOAP services."
+    },
+    {
+      "url": "https://reynaers-rock-tramplin.zrockradio.bg/",
+      "name": "reynaers-rock-tramplin.zrockradio.bg",
+      "description": "Event voting site for ZRock Radio's rock competition — jQuery-based SPA/catalog hybrid."
+    },
+    {
+      "url": "https://ndk.bg/",
+      "name": "ndk.bg",
+      "description": "Website for NDK (National Palace of Culture) — the largest multifunctional congress and exhibition center in Southeast Europe, located in Sofia."
+    },
+    {
+      "url": "https://arteks.net",
+      "name": "arteks.net",
+      "description": "Corporate site for Arteks Engineering — a Bulgarian architectural-construction company focused on luxury real estate development."
+    },
+    {
+      "url": "https://www.bittel.bg",
+      "name": "bittel.bg",
+      "description": "E-commerce and product catalog for Bittel Ltd — official Bulgarian distributor of Daikin, Toshiba, Panasonic, Alcatel and others in air conditioning, solar tech, telecoms, and IT."
+    },
+    {
+      "url": "https://indeavr.com",
+      "name": "indeavr.com",
+      "description": "Corporate site for INDEAVR — a Bulgarian technology services company specializing in digital transformation, data science, cloud, and AI solutions."
+    }
+  ]
 }

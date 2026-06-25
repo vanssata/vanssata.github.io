@@ -1,57 +1,153 @@
-new Vue({
-    el: '#frontend',
-        data() {
-            return {
-            css: {
-                title:"CSS",
-                frameworks: [
-                    {'title':"Bootstrap","link":"https://getbootstrap.com/"},
-                    {'title':"Materialize","link":"https://materializecss.com/"},
-                    {'title':"Material Design Lite(MDL)","link":"https://getmdl.io/"},
-                    {'title':"Bulma","link":"https://bulma.io/"}
-                ]},
-            js:{
-                title:"Javascript",
-                frameworks: [
-                    {title: "Vuejs", link:"https://vuejs.org/"},
-                    {title: "Jquery", link:"https://jquery.com/"},
-                    {title: "knockout", link:"https://knockoutjs.com/"},
-                    {title: "lodash", link:"https://lodash.com/"},
-                    {title: "moonjs", link:"https://kbrsh.github.io/moon/"},
-                    {title: "requirejs", link:"https://requirejs.org/"},
-                    {title: "node", link:"https://nodejs.org/en/"}
-                ]
-            }
-        }
-    }
-  });
-  /**
+const { createApp, ref, computed, onMounted, watch } = Vue;
 
-   */
-new Vue({
-    el: '#backend',
-        data() {
-            return {
-                items: {
-                    "PHP5.3+ /7+": "Доста разнородни проекти, от такива с малко натовравния до такива над 1000 заявки в секунда",
-                    "Symfony 2.4/3.4/4.4": "Доста богат опит, от cli-tools до системи за управление на процесите в производстовото",
-                    "Zend": "Подръжка на няколко много стари проекта със първите версии",
-                    "CI2": "Няколко лични проекта, и няколко за поддръжка",
-                    "Yii/Yii2": "Два три лични проекта",
-                    "Phalcon": "Няколко акедемични задачки",
-                    "Magento2": "Доста сериозни магазини, със много промени по основните фунционалности като (поръчки, потребители, каталог и т.н)",
-                    "Joomla JSocial": "Мигриране на 1.3 към 4 и писане на късъм логика",
-                    "WP, Drupal": "Имам някаква представа какво преставляват",
-                    "Sylius": "Изграждане на е-commerce платформа със силно специфични процеси и обработка на данни от над 100 различни системи",
-                    "Python /Django": "Разрботване на REST-API за ERP, подръжка на няколко информациони сайта и ODOO platform",
-                    "DataBase": " MySql/MariaDB/SQLITE2 - от много малки бази до огромни дата сетове",
-                    "SQL": "има ли смисъл да го споменавам ?",
-                    "Ajax": "колкото и да не ми харесва js все пак тенденциите са в SPA и XHR",
-                    "REST": "много ми се иска да работя по тези парадигми но рядко се случва.",
-                    "SOAP": "необходимо зло",
-                    "PHP frameworks": "SF 2/3/4, CI2, Zend 1/2, Yii/Yii2, Phalcon",
-                    "node": "Използвам го при проектите с по-сложен Frontend. ",
-                }
-        }
+const FAV = (domain) =>
+  `https://www.google.com/s2/favicons?sz=32&domain=${domain}`;
+
+const ICON_MAP = {
+  // Backend languages
+  PHP: "devicon-php-plain colored",
+  Python: "devicon-python-plain colored",
+  JavaScript: "devicon-javascript-plain colored",
+  Bash: "devicon-bash-plain colored",
+  // Backend frameworks
+  Symfony: "devicon-symfony-original colored",
+  "API Platform": FAV("api-platform.com"),
+  Laravel: "devicon-laravel-plain colored",
+  CodeIgniter: "devicon-codeigniter-plain colored",
+  "Zend Framework 2": FAV("framework.zend.com"),
+  Doctrine: FAV("doctrine-project.org"),
+  Django: "devicon-django-plain colored",
+  // CMS
+  WordPress: "devicon-wordpress-plain colored",
+  Joomla: "devicon-joomla-plain colored",
+  DjangoCMS: FAV("django-cms.org"),
+  // E-commerce
+  Sylius: FAV("sylius.com"),
+  "Magento 2": "devicon-magento-original colored",
+  Shopware: "devicon-shopware-original colored",
+  OpenCart: FAV("opencart.com"),
+  // Databases
+  MySQL: "devicon-mysql-plain colored",
+  MariaDB: "devicon-mysql-plain colored",
+  PerconaDB: FAV("percona.com"),
+  SQLite: "devicon-sqlite-plain colored",
+  Redis: "devicon-redis-plain colored",
+  // Caching & Queuing
+  "PSR-6": FAV("php-fig.org"),
+  Varnish: FAV("varnish-software.com"),
+  RabbitMQ: "devicon-rabbitmq-original colored",
+  AMQP: "devicon-rabbitmq-original colored",
+  // DevOps
+  Docker: "devicon-docker-plain colored",
+  "Docker Compose": "devicon-docker-plain colored",
+  "Docker Swarm": "devicon-docker-plain colored",
+  "GitLab CI": "devicon-gitlab-plain colored",
+  "Bash scripting": "devicon-bash-plain colored",
+  // Frontend JS
+  jQuery: "devicon-jquery-plain colored",
+  "Vue.js": "devicon-vuejs-plain colored",
+  React: "devicon-react-plain colored",
+  "Alpine.js": "devicon-alpinejs-original colored",
+  "@hotwired/Stimulus": FAV("stimulus.hotwired.dev"),
+  "@hotwired/Turbo": FAV("turbo.hotwired.dev"),
+  KnockoutJS: FAV("knockoutjs.com"),
+  // CSS / Build
+  SCSS: "devicon-sass-original colored",
+  "Bootstrap 5": "devicon-bootstrap-plain colored",
+  "Semantic UI": FAV("semantic-ui.com"),
+  Bulma: FAV("bulma.io"),
+  webpack: "devicon-webpack-plain colored",
+  yarn: "devicon-yarn-plain colored",
+  // AI
+  "GitHub Copilot (Codex)": "devicon-github-original colored",
+  "Anthropic Claude": FAV("anthropic.com"),
+};
+
+createApp({
+  setup() {
+    const storedDark = localStorage.getItem("cv-dark");
+    const darkMode = ref(
+      storedDark !== null
+        ? storedDark === "true"
+        : window.matchMedia("(prefers-color-scheme: dark)").matches,
+    );
+
+    const lang = ref(localStorage.getItem("cv-lang") || "en");
+    const translations = ref({ en: null, bg: null });
+    const loading = ref(true);
+
+    function applyTheme() {
+      document.documentElement.setAttribute(
+        "data-bs-theme",
+        darkMode.value ? "dark" : "light",
+      );
+      localStorage.setItem("cv-dark", darkMode.value);
     }
-  });
+
+    applyTheme();
+
+    onMounted(async () => {
+      try {
+        const [en, bg] = await Promise.all([
+          fetch("translations/en.json").then((r) => r.json()),
+          fetch("translations/bg.json").then((r) => r.json()),
+        ]);
+        translations.value = { en, bg };
+      } finally {
+        loading.value = false;
+      }
+    });
+
+    const t = computed(() => translations.value[lang.value] || {});
+
+    watch(
+      lang,
+      (v) => {
+        localStorage.setItem("cv-lang", v);
+        document.documentElement.lang = v;
+      },
+      { immediate: true },
+    );
+
+    watch(darkMode, applyTheme);
+
+    const keySkills = computed(() => {
+      const s = t.value.skills;
+      if (!s) return [];
+      return [
+        ...(s.backend?.groups[0]?.items ?? []).slice(0, 4),
+        ...(s.backend?.groups[1]?.items ?? []).slice(0, 3),
+        ...(s.frontend?.groups[0]?.items ?? []).slice(0, 3),
+        ...(s.devops?.groups[0]?.items ?? []).slice(0, 2),
+        ...(s.ai?.groups[0]?.items ?? []),
+      ];
+    });
+
+    function downloadPDF() {
+      const el = document.getElementById("cv-content");
+      const filename = `Ivan_Kakurov_CV_${lang.value.toUpperCase()}.pdf`;
+      html2pdf()
+        .set({
+          margin: [8, 8, 8, 8],
+          filename,
+          image: { type: "jpeg", quality: 0.98 },
+          html2canvas: {
+            scale: 2,
+            useCORS: true,
+            onclone(clonedDoc) {
+              clonedDoc.documentElement.setAttribute("data-bs-theme", "light");
+              clonedDoc
+                .querySelectorAll(".print-hidden")
+                .forEach((el) => (el.style.display = "none"));
+            },
+          },
+          jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+          pagebreak: { mode: ["avoid-all", "css"] },
+        })
+        .from(el)
+        .save();
+    }
+
+    return { lang, darkMode, t, loading, keySkills, downloadPDF, ICON_MAP };
+  },
+}).mount("#app");

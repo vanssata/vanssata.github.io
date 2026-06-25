@@ -1,0 +1,199 @@
+{
+  "meta": {
+    "lang": "bg",
+    "title": "Иван Какъров – Senior PHP Developer"
+  },
+  "nav": {
+    "download": "Изтегли CV",
+    "darkMode": "Тъмен режим",
+    "lightMode": "Светъл режим"
+  },
+  "sections": {
+    "contacts": "Контакти",
+    "experience": "Професионален опит",
+    "education": "Образование",
+    "languages": "Езици",
+    "skills": "Умения",
+    "projects": "Проекти",
+    "references": "Препоръки"
+  },
+  "personal": {
+    "name": "Иван Йорданов Какъров",
+    "tagline": "Senior PHP Developer · Full-Stack Разработчик",
+    "dob": "17.02.1987",
+    "gender": "Мъж",
+    "location": "София, България",
+    "relocation": "Отворен за релокация в други градове в България",
+    "email": "ivan.kakurov@gmail.com",
+    "phone": "+359 882 647 071",
+    "github": "https://github.com/vanssata"
+  },
+  "languages": [
+    { "name": "Български", "level": "Роден" },
+    { "name": "Английски", "level": "Средно ниво" }
+  ],
+  "experience": [
+    {
+      "period": "Август 2019 – до момента",
+      "role": "Senior PHP Developer",
+      "company": "Abrites LTD",
+      "companyUrl": "https://abrites.com",
+      "location": "София",
+      "sector": "Автомобилна индустрия, авто-услуги",
+      "size": "150–200 служители",
+      "description": [
+        "Изграждане и поддръжка на глобалната e-commerce платформа abrites.com, обслужваща 4 независими правни субекта с динамично ценообразуване на ниво клиент и 15 интегрирани платежни доставчика — 8 внедрени от нулата за специфични регионални изисквания.",
+        "Проектиране и внедряване на логика за валидиране и нормализиране на данни от разнородни външни източници, включително разкриване на зависимости между обекти без директна контекстуална връзка в рамките на различни ERP схеми.",
+        "Поддръжка на вътрешна ERP/CRM (Python/Django + PostgreSQL), персонализирана CMS базирана на Symfony, система за управление на събития, REST API (Django REST Framework + Swagger), CI/CD (GitLab CI) и интеграция с Dolibarr ERP."
+      ]
+    },
+    {
+      "period": "Август 2018 – Август 2019",
+      "role": "PHP Developer",
+      "company": "Beluga",
+      "companyUrl": "https://beluga.software/",
+      "location": "София",
+      "sector": "Интернет / E-commerce",
+      "size": "10–20 служители",
+      "description": [
+        "Работа по мащабни и сложни e-commerce проекти с Magento (Adobe Commerce) в тясно партньорство с холандската компания Diract. Разработка на персонализации на основна функционалност, B2B модули и процеси, промяна на checkout и фактуриране."
+      ]
+    },
+    {
+      "period": "Септември 2015 – Август 2018",
+      "role": "PHP Developer",
+      "company": "Studiox",
+      "location": "София",
+      "sector": "Интернет / E-commerce",
+      "size": "20–50 служители",
+      "description": [
+        "Разработка и поддръжка на разнородни проекти — от малки landing сайтове до сложни системи за банки и застрахователни компании. Изграждане на персонализирани e-commerce решения от нулата."
+      ]
+    },
+    {
+      "period": "Юли 2013 – Септември 2015",
+      "role": "PHP Developer",
+      "company": "3web.bg",
+      "location": "Пловдив",
+      "sector": "Интернет / E-commerce",
+      "size": "10–20 служители",
+      "description": [
+        "Разработка на малки и средни сайтове и API-та."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "period": "Септември 1995 – Май 2006",
+      "institution": "Хр. Данов",
+      "location": "Пловдив",
+      "level": "Средно образование"
+    }
+  ],
+  "skills": {
+    "backend": {
+      "title": "Backend",
+      "groups": [
+        { "label": "Езици", "items": ["PHP", "Python", "Bash", "JavaScript"] },
+        { "label": "Frameworks", "items": ["Symfony", "API Platform", "Laravel", "CodeIgniter", "Zend Framework 2", "Doctrine", "Django"] },
+        { "label": "CMS", "items": ["WordPress", "Joomla", "DjangoCMS"] },
+        { "label": "E-commerce", "items": ["Sylius", "Magento 2", "Shopware", "OpenCart"] },
+        { "label": "Бази данни", "items": ["MySQL", "MariaDB", "PerconaDB", "SQLite", "Redis"] },
+        { "label": "Кеширане & Опашки", "items": ["PSR-6", "Varnish", "RabbitMQ", "AMQP"] }
+      ]
+    },
+    "frontend": {
+      "title": "Frontend",
+      "groups": [
+        { "label": "JavaScript", "items": ["jQuery", "Vue.js", "React", "Alpine.js", "@hotwired/Stimulus", "@hotwired/Turbo", "KnockoutJS"] },
+        { "label": "CSS / Build", "items": ["SCSS", "Bootstrap 5", "Semantic UI", "Bulma", "webpack", "yarn"] }
+      ]
+    },
+    "devops": {
+      "title": "DevOps & CI/CD",
+      "groups": [
+        { "label": "Контейнери", "items": ["Docker", "Docker Compose", "Docker Swarm"] },
+        { "label": "CI/CD", "items": ["GitLab CI", "Bash scripting"] }
+      ]
+    },
+    "ai": {
+      "title": "AI & Инструменти за разработчици",
+      "groups": [
+        { "label": "AI Асистенти", "items": ["GitHub Copilot (Codex)", "Anthropic Claude"] },
+        { "label": "Подход", "items": ["Силен фокус върху анализ на проблеми и проектиране на решения; опит в разбиването на сложни бизнес изисквания в прецизни технически решения и в използването на AI инструменти за самостоятелно и ефективно проектиране и внедряване на функции."], "paragraph": true }
+      ]
+    }
+  },
+  "projects": [
+    {
+      "url": "https://breezy-bg.com",
+      "name": "breezy-bg.com",
+      "description": "E-commerce платформа на Shopware 6.5. Разработка на персонализирани модули за промяна на основната концепция на количката и checkout процеса. Реализирано с AI-асистирана разработка (Codex / Claude). Оптимизирано за изискванията на българското законодателство за електронна търговия."
+    },
+    {
+      "url": "https://abrites.com",
+      "name": "abrites.com",
+      "description": "Глобална e-commerce платформа за автомобилна диагностика. Вижте Abrites LTD в раздел Професионален опит за пълни детайли."
+    },
+    {
+      "url": "https://bigmarket.bg/",
+      "name": "bigmarket.bg",
+      "description": "B2B платформа за едро на канцеларски материали и офис консумативи, изградена на Magento 2 — обслужва дистрибутори с инвентар в реално време от 10+ склада."
+    },
+    {
+      "url": "https://joya.bg/",
+      "name": "officemarket.bg / joya.bg",
+      "description": "Retail e-commerce за офис и канцеларски продукти (сестринска платформа на BigMarket), изградена на Magento 2 с изцяло персонализиран B2B/B2C бизнес модел."
+    },
+    {
+      "url": "https://hermesbooks.bg/",
+      "name": "hermesbooks.bg",
+      "description": "Онлайн книжарница на Хермес — най-голямата верига книжарници в България с 12 обекта в страната — изградена на Magento 2 с книги, канцеларски материали и културни събития."
+    },
+    {
+      "url": "https://www.nippon.bg",
+      "name": "nippon.bg",
+      "description": "Онлайн магазин за марката Nippon (слънчеви колектори, климатици, домофони) — българска марка, собственост на Bittel Ltd, разпространявана в цяла Европа."
+    },
+    {
+      "url": "https://thelearningedge.net",
+      "name": "thelearningedge.net",
+      "description": "Корпоративен презентационен сайт, изграден като демонстрация на персонализиран фреймуорк на Symfony 2."
+    },
+    {
+      "url": "https://coloreffect.bg",
+      "name": "coloreffect.bg",
+      "description": "Интериорен дизайн на луксозни системи за слънцезащита за прозорци и фасади."
+    },
+    {
+      "url": "https://b2b.solvex.bg",
+      "name": "b2b.solvex.bg",
+      "description": "B2B/B2C платформа за резервации и управление на хотели с 1 200+ обекта и ~50 GB/ден данни в реално време, обработвани от SOAP услуги."
+    },
+    {
+      "url": "https://reynaers-rock-tramplin.zrockradio.bg/",
+      "name": "reynaers-rock-tramplin.zrockradio.bg",
+      "description": "Сайт за гласуване на рок конкурс на ZRock Radio — jQuery SPA/каталог хибрид."
+    },
+    {
+      "url": "https://ndk.bg/",
+      "name": "ndk.bg",
+      "description": "Сайт на НДК (Национален дворец на културата) — най-големият многофункционален конгресен и изложбен центъроб в Югоизточна Европа, София."
+    },
+    {
+      "url": "https://arteks.net",
+      "name": "arteks.net",
+      "description": "Корпоративен сайт на Артекс Инженеринг — българска архитектурно-строителна компания в сегмента на луксозните имоти."
+    },
+    {
+      "url": "https://www.bittel.bg",
+      "name": "bittel.bg",
+      "description": "E-commerce и продуктов каталог на Bittel Ltd — официален вносител за България на Daikin, Toshiba, Panasonic, Alcatel и др. в климатизация, слънчева техника и телекоми."
+    },
+    {
+      "url": "https://indeavr.com",
+      "name": "indeavr.com",
+      "description": "Корпоративен сайт на INDEAVR — българска компания за технологични услуги, специализирана в дигитална трансформация, наука за данни, облак и AI решения."
+    }
+  ]
+}
