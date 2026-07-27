@@ -61,6 +61,11 @@ const ICON_MAP = {
   // AI
   "GitHub Copilot (Codex)": "devicon-github-original colored",
   "Anthropic Claude": FAV("anthropic.com"),
+  "JetBrains Junie": FAV("jetbrains.com"),
+  "Custom MCP commands": FAV("modelcontextprotocol.io"),
+  "Собствени MCP команди": FAV("modelcontextprotocol.io"),
+  "Собствен AI tooling": FAV("anthropic.com"),
+  "E2E тестове с AI": FAV("playwright.dev"),
 };
 
 createApp({

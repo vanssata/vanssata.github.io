@@ -9,21 +9,23 @@
     "lightMode": "Light mode"
   },
   "sections": {
+    "profile": "Profile",
     "contacts": "Contacts",
     "experience": "Work Experience",
     "education": "Education",
     "languages": "Languages",
     "skills": "Skills",
+    "personalProjects": "Personal Projects",
     "projects": "Projects",
     "references": "References"
   },
   "personal": {
     "name": "Ivan Jordanov Kakurov",
-    "tagline": "Senior PHP Developer · Full-Stack Engineer",
-    "dob": "17.02.1987",
-    "gender": "Male",
+    "tagline": "Senior PHP Developer · Full-Stack · 13+ years in E-commerce",
     "location": "Sofia, Bulgaria",
+    "availability": "Open to new opportunities — remote / hybrid / on-site",
     "relocation": "Open to relocation within Bulgaria",
+    "linkedin": "",
     "email": "ivan.kakurov@gmail.com",
     "phone": "+359 882 647 071",
     "phone2": "+359 878 525 246",
@@ -32,8 +34,9 @@
   },
   "languages": [
     { "name": "Bulgarian", "level": "Native" },
-    { "name": "English", "level": "Intermediate" }
+    { "name": "English", "level": "Professional working proficiency (daily written & technical communication)" }
   ],
+  "summary": "Senior PHP developer with 13+ years of experience building and owning complex e-commerce platforms end-to-end (Symfony, Sylius, Magento 2, Shopware 6) — architecture, payment integrations (15+ providers), ERP/CRM synchronization, and CI/CD. Author of open-source plugins for JetBrains and Sylius. Early adopter of AI-assisted engineering: custom MCP tooling, AI-driven E2E testing, and a security-hardened, optimized AI development workflow.",
   "experience": [
     {
       "period": "August 2019 – present",
@@ -44,11 +47,10 @@
       "sector": "Automotive, auto services",
       "size": "150–200 employees",
       "description": [
-        "Built and maintained the global e-commerce platform at abrites.com, serving 4 independent legal entities with per-client dynamic pricing and 15 integrated payment providers — 8 implemented from scratch to meet specific regional requirements.",
-         "",
-        "Designed and implemented data validation and normalization logic across heterogeneous external sources, including resolution of entity relationships without direct contextual links between divergent ERP schemas.",
-        "",
-        "Maintained internal ERP/CRM (Python/Django + PostgreSQL), custom Symfony-based CMS, event management system, REST API (Django REST Framework + Swagger), CI/CD (GitLab CI), and Dolibarr ERP integration."
+        "Own the global e-commerce platform abrites.com end-to-end — 4 independent legal entities, per-client dynamic pricing, and 15 integrated payment providers, 8 of them implemented from scratch for specific regional requirements.",
+        "Designed data validation and normalization across heterogeneous external sources, resolving entity relationships between divergent ERP schemas without direct contextual links.",
+        "Maintain the internal ERP/CRM (Python/Django + PostgreSQL), a custom Symfony-based CMS, an event management system, a REST API (Django REST Framework + Swagger), GitLab CI pipelines, and a Dolibarr ERP integration.",
+        "Introduced AI-driven end-to-end testing and a security-hardened, optimized vibe-coding workflow (Claude, Codex, Junie) for feature development."
       ]
     },
     {
@@ -60,7 +62,8 @@
       "sector": "Internet / E-commerce",
       "size": "10–20 employees",
       "description": [
-        "Worked on large and complex e-commerce projects using Magento (Adobe Commerce). Delivered customizations on core functionality, developed custom B2B modules and processes, and redesigned the checkout and invoicing pipeline."
+        "Delivered large-scale Magento (Adobe Commerce) e-commerce projects in close partnership with the Dutch agency Diract.",
+        "Customized core functionality, built custom B2B modules and processes, and redesigned the checkout and invoicing pipeline."
       ]
     },
     {
@@ -71,7 +74,8 @@
       "sector": "Internet / E-commerce",
       "size": "20–50 employees",
       "description": [
-        "Developed and maintained a wide range of projects varying in scale and complexity — from small landing pages for local businesses to complex systems for banks and insurance companies. Built custom e-commerce solutions from scratch."
+        "Developed and maintained projects across the full range of scale — from landing pages for local businesses to complex systems for banks and insurance companies.",
+        "Built custom e-commerce solutions from scratch."
       ]
     },
     {
@@ -86,6 +90,7 @@
       ]
     }
   ],
+  "educationNote": "Self-taught engineer — 13+ years of continuous hands-on learning in production systems, capped by published open-source work on the JetBrains Marketplace and the official Sylius Addons store.",
   "education": [
     {
       "period": "September 1995 – May 2006",
@@ -94,6 +99,12 @@
       "level": "Secondary school"
     }
   ],
+  "cta": {
+    "title": "Let's Talk",
+    "text": "Interested in working together? Reach me by email — I'm happy to discuss senior PHP / e-commerce roles.",
+    "email": "Email me",
+    "download": "Download CV"
+  },
   "skills": {
     "backend": {
       "title": "Backend",
@@ -123,17 +134,41 @@
     "ai": {
       "title": "AI & Developer Tools",
       "groups": [
-        { "label": "AI Code Assistants", "items": ["GitHub Copilot (Codex)", "Anthropic Claude"] },
+        { "label": "AI Code Assistants", "items": ["Anthropic Claude", "GitHub Copilot (Codex)", "JetBrains Junie"] },
+        { "label": "AI Tooling & MCP", "items": ["Custom MCP commands", "Custom agent tooling", "AI-driven E2E testing"] },
         { "label": "Approach", "items": ["Strong focus on problem analysis and solution design; experienced in breaking down complex business requirements into precise technical solutions, and in leveraging AI tooling to architect and implement features independently and efficiently."], "paragraph": true }
       ]
     }
   },
+  "personalProjects": {
+    "note": "Built with AI tooling (Claude, Codex, JetBrains Junie), custom-written tooling, and custom MCP commands.",
+    "items": [
+      {
+        "url": "https://plugins.jetbrains.com/plugin/33150-claude-subscription-acp-agent",
+        "github": "https://github.com/vanssata/jetbrains-claude-subscription",
+        "name": "Claude Subscription ACP Agent — JetBrains plugin",
+        "description": "JetBrains Marketplace plugin that adds a Claude Subscription (Pro/Max) ACP agent to the AI Assistant chat agent picker — use a Claude subscription directly inside JetBrains IDEs."
+      },
+      {
+        "url": "https://addons.sylius.com/en_US/products/vanssa-sylius-slider",
+        "github": "https://github.com/vanssata/sylius-slider-plugin",
+        "name": "Vanssa Sylius Slider",
+        "description": "Feature-rich responsive slider plugin for Sylius 2, published on the official Sylius Addons store — translatable image and video slides, live admin previews, Symfony UX rendering, Twig Hooks, and optional CMS integrations."
+      },
+      {
+        "url": "https://breezy-bg.com",
+        "name": "breezy-bg.com",
+        "description": "Shopware 6.5 e-commerce platform with custom modules replacing the core cart and checkout concept, optimized for Bulgarian e-commerce law compliance."
+      },
+      {
+        "url": "https://vanssata.github.io/",
+        "github": "https://github.com/vanssata/vanssata.github.io",
+        "name": "vanssata.github.io — this CV",
+        "description": "Vue 3 + Bootstrap 5 single-page CV with runtime i18n (EN/BG), dark mode, and print-optimized PDF export. Started as hand-written clean code and later migrated to an AI-assisted workflow — Claude Code with project-specific skills, hooks, and MCP tooling."
+      }
+    ]
+  },
   "projects": [
-    {
-      "url": "https://breezy-bg.com",
-      "name": "breezy-bg.com",
-      "description": "Shopware 6.5 e-commerce platform with custom modules replacing the core cart and checkout concept. Developed independently using AI-assisted tooling (Codex / Claude). Optimized for Bulgarian e-commerce law compliance."
-    },
     {
       "url": "https://abrites.com",
       "name": "abrites.com",

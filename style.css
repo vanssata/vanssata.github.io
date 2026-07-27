@@ -71,6 +71,20 @@ a.sidebar-info-item:hover {
   color: var(--cv-accent);
 }
 
+.availability-item {
+  color: var(--cv-accent);
+}
+
+/* Keep sidebar content in view while the main column scrolls */
+@media (min-width: 992px) {
+  .cv-sidebar-inner {
+    position: sticky;
+    top: 72px; /* below the sticky navbar */
+    max-height: calc(100vh - 88px);
+    overflow-y: auto;
+  }
+}
+
 /* ── Main content ───────────────────────────────────────── */
 .cv-main {
   border-left: 1px solid var(--cv-section-border);
@@ -136,20 +150,28 @@ a.sidebar-info-item:hover {
   color: var(--bs-secondary-color);
 }
 
+/* ── CTA ────────────────────────────────────────────────── */
+.cta-box {
+  background-color: var(--cv-sidebar-bg);
+  border: 1px solid var(--cv-section-border);
+}
+
 /* ── Print / PDF ────────────────────────────────────────── */
 .print-only {
   display: none;
 }
 
-/* Remove browser print headers/footers (URL, title, date, page numbers) */
+/* Top/bottom margins live on @page so they repeat on every sheet;
+   body padding would only apply once, at the very start and end of the flow.
+   Horizontal stays 0 — body padding handles the sides. */
 @page {
   size: A4;
-  margin: 0;
+  margin: 12mm 0;
 }
 
 @media print {
   body {
-    padding: 10mm 10mm;
+    padding: 0 10mm;
   }
   /* Force light theme regardless of dark mode setting */
   :root,
@@ -220,8 +242,21 @@ a.sidebar-info-item:hover {
     color: #6c757d !important;
   }
 
+  /* Let long jobs split across pages — forcing them whole pushed a tall item
+     to the next sheet and left half a page empty. Header stays with the
+     first bullets; individual bullets never split. */
   .experience-item {
-    page-break-inside: avoid;
+    break-inside: auto;
+    orphans: 3;
+    widows: 3;
+  }
+
+  .experience-item > :not(ul) {
+    break-after: avoid;
+  }
+
+  .experience-item li {
+    break-inside: avoid;
   }
 }
 

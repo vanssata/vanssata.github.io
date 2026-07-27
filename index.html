@@ -3,9 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Ivan Kakurov – Senior PHP Developer CV" />
-    <meta name="robots" content="noarchive" />
+    <meta
+      name="description"
+      content="Ivan Kakurov – Senior PHP Developer with 13+ years of experience in complex e-commerce platforms (Symfony, Sylius, Magento 2, Shopware 6). Open-source plugin author. Sofia, Bulgaria."
+    />
     <title>Ivan Kakurov – Senior PHP Developer</title>
+
+    <!-- Structured data for name-based search results -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ivan Kakurov",
+        "alternateName": "Иван Какъров",
+        "jobTitle": "Senior PHP Developer",
+        "description": "Senior PHP Developer with 13+ years of experience in complex e-commerce platforms (Symfony, Sylius, Magento 2, Shopware 6). Open-source plugin author.",
+        "url": "https://vanssata.github.io/",
+        "image": "https://vanssata.github.io/to_jobs.jpeg",
+        "email": "mailto:ivan.kakurov@gmail.com",
+        "telephone": "+359882647071",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Sofia",
+          "addressCountry": "BG"
+        },
+        "sameAs": ["https://github.com/vanssata"],
+        "knowsAbout": [
+          "PHP",
+          "Symfony",
+          "Sylius",
+          "Magento 2",
+          "Shopware 6",
+          "E-commerce",
+          "Payment integrations",
+          "Vue.js",
+          "Docker",
+          "CI/CD"
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Abrites LTD",
+          "url": "https://abrites.com"
+        }
+      }
+    </script>
 
     <!-- Bootstrap 5 -->
     <link
@@ -103,95 +144,165 @@
         <div class="row g-0">
           <!-- ── Sidebar ────────────────────────────────────── -->
           <aside class="col-lg-4 cv-sidebar p-4">
-            <!-- Photo + Name -->
-            <div class="text-center mb-4">
-              <img
-                src="to_jobs.jpeg"
-                alt="Ivan Kakurov"
-                class="profile-photo rounded-circle mb-3"
-              />
-              <h1 class="fs-4 fw-bold mb-0">{{ t.personal.name }}</h1>
-              <p class="text-muted small mt-1">{{ t.personal.tagline }}</p>
-            </div>
+            <div class="cv-sidebar-inner">
+              <!-- Photo + Name -->
+              <div class="text-center mb-4">
+                <img
+                  src="to_jobs.jpeg"
+                  alt="Ivan Kakurov"
+                  class="profile-photo rounded-circle mb-3"
+                />
+                <h1 class="fs-4 fw-bold mb-0">{{ t.personal.name }}</h1>
+                <p class="text-muted small mt-1">{{ t.personal.tagline }}</p>
+              </div>
 
-            <!-- Personal Info -->
-            <div class="mb-4">
-              <div class="sidebar-info-item">
-                <i class="fa-solid fa-cake-candles text-muted me-2"></i>{{
-                t.personal.dob }}
+              <!-- Personal Info -->
+              <div class="mb-4">
+                <div
+                  v-if="t.personal.availability"
+                  class="sidebar-info-item fw-medium availability-item"
+                >
+                  <i class="fa-solid fa-circle-check me-2"></i>{{
+                  t.personal.availability }}
+                </div>
+                <div class="sidebar-info-item">
+                  <i class="fa-solid fa-location-dot text-muted me-2"></i>{{
+                  t.personal.location }}
+                </div>
+                <div class="sidebar-info-item">
+                  <i class="fa-solid fa-truck-moving text-muted me-2"></i>{{
+                  t.personal.relocation }}
+                </div>
               </div>
-              <div class="sidebar-info-item">
-                <i class="fa-solid fa-venus-mars text-muted me-2"></i>{{
-                t.personal.gender }}
-              </div>
-              <div class="sidebar-info-item">
-                <i class="fa-solid fa-location-dot text-muted me-2"></i>{{
-                t.personal.location }}
-              </div>
-              <div class="sidebar-info-item">
-                <i class="fa-solid fa-truck-moving text-muted me-2"></i>{{
-                t.personal.relocation }}
-              </div>
-            </div>
 
-            <!-- Contacts -->
-            <h2 class="sidebar-section-title">{{ t.sections.contacts }}</h2>
-            <div class="mb-4">
-              <a :href="'mailto:' + t.personal.email" class="sidebar-info-item">
-                <i class="fa-solid fa-envelope text-muted me-2"></i>{{
-                t.personal.email }}
-              </a>
-              <a :href="'tel:' + t.personal.phone" class="sidebar-info-item">
-                <i class="fa-solid fa-phone text-muted me-2"></i>{{
-                t.personal.phone }}
-              </a><a :href="'tel:' + t.personal.phone2" class="sidebar-info-item">
-                <i class="fa-solid fa-phone text-muted me-2"></i>{{
-                t.personal.phone2 }}
-              </a>
-              <a
-                :href="t.personal.github"
-                target="_blank"
-                rel="noopener"
-                class="sidebar-info-item"
-              >
-                <i class="fa-brands fa-github text-muted me-2"></i>GitHub
-              </a>
-              <a
-                :href="t.personal.site"
-                target="_blank"
-                rel="noopener"
-                class="sidebar-info-item"
-              >
-                <i class="fa-solid fa-globe text-muted me-2"></i> {{ t.personal.site }}
-              </a>
-            </div>
-
-            <!-- Languages -->
-            <h2 class="sidebar-section-title">{{ t.sections.languages }}</h2>
-            <div class="mb-4">
-              <div
-                v-for="item in t.languages"
-                :key="item.name"
-                class="sidebar-info-item"
-              >
-                <span class="fw-medium">{{ item.name }}</span>: {{ item.level }}
+              <!-- Contacts -->
+              <h2 class="sidebar-section-title">{{ t.sections.contacts }}</h2>
+              <div class="mb-4">
+                <a
+                  :href="'mailto:' + t.personal.email"
+                  class="sidebar-info-item"
+                >
+                  <i class="fa-solid fa-envelope text-muted me-2"></i>{{
+                  t.personal.email }}
+                </a>
+                <a :href="'tel:' + t.personal.phone" class="sidebar-info-item">
+                  <i class="fa-solid fa-phone text-muted me-2"></i>{{
+                  t.personal.phone }} </a
+                ><a
+                  :href="'tel:' + t.personal.phone2"
+                  class="sidebar-info-item"
+                >
+                  <i class="fa-solid fa-phone text-muted me-2"></i>{{
+                  t.personal.phone2 }}
+                </a>
+                <a
+                  v-if="t.personal.linkedin"
+                  :href="t.personal.linkedin"
+                  target="_blank"
+                  rel="noopener"
+                  class="sidebar-info-item"
+                >
+                  <i class="fa-brands fa-linkedin text-muted me-2"></i>LinkedIn
+                </a>
+                <a
+                  :href="t.personal.github"
+                  target="_blank"
+                  rel="noopener"
+                  class="sidebar-info-item"
+                >
+                  <i class="fa-brands fa-github text-muted me-2"></i>GitHub
+                </a>
+                <a
+                  :href="t.personal.site"
+                  target="_blank"
+                  rel="noopener"
+                  class="sidebar-info-item"
+                >
+                  <i class="fa-solid fa-globe text-muted me-2"></i> {{
+                  t.personal.site }}
+                </a>
               </div>
-            </div>
 
-            <!-- Key Skills -->
-            <h2 class="sidebar-section-title">{{ t.sections.skills }}</h2>
-            <div class="d-flex flex-wrap gap-1">
-              <span
-                v-for="skill in keySkills"
-                :key="skill"
-                class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill"
-                >{{ skill }}</span
-              >
+              <!-- Languages -->
+              <h2 class="sidebar-section-title">{{ t.sections.languages }}</h2>
+              <div class="mb-4">
+                <div
+                  v-for="item in t.languages"
+                  :key="item.name"
+                  class="sidebar-info-item"
+                >
+                  <span
+                    ><span class="fw-medium">{{ item.name }}</span>: {{
+                    item.level }}</span
+                  >
+                </div>
+              </div>
+
+              <!-- Key Skills -->
+              <h2 class="sidebar-section-title">{{ t.sections.skills }}</h2>
+              <div class="d-flex flex-wrap gap-1">
+                <span
+                  v-for="skill in keySkills"
+                  :key="skill"
+                  class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill"
+                  >{{ skill }}</span
+                >
+              </div>
             </div>
           </aside>
 
           <!-- ── Main ──────────────────────────────────────── -->
           <main class="col-lg-8 cv-main p-4">
+            <!-- Profile -->
+            <section class="mb-4" v-if="t.summary">
+              <h2 class="section-title">{{ t.sections.profile }}</h2>
+              <p class="small mb-0">{{ t.summary }}</p>
+            </section>
+
+            <!-- Personal Projects -->
+            <section
+              id="personal-projects"
+              class="mb-4"
+              v-if="t.personalProjects"
+            >
+              <h2 class="section-title">{{ t.sections.personalProjects }}</h2>
+              <p class="small text-muted fst-italic mb-2">
+                {{ t.personalProjects.note }}
+              </p>
+              <dl class="projects-list mb-0">
+                <template
+                  v-for="project in t.personalProjects.items"
+                  :key="project.url"
+                >
+                  <dt>
+                    <a
+                      :href="project.url"
+                      target="_blank"
+                      rel="noopener"
+                      class="print-hidden"
+                      >{{ project.name }}</a
+                    >
+                    <span class="print-only">{{ project.name }}</span>
+                    <a
+                      v-if="project.github"
+                      :href="project.github"
+                      target="_blank"
+                      rel="noopener"
+                      class="print-hidden ms-2 fw-normal small"
+                    >
+                      <i class="fa-brands fa-github me-1"></i>GitHub
+                    </a>
+                  </dt>
+                  <dd v-if="project.description" class="small text-muted">
+                    {{ project.description }}
+                    <span v-if="project.github" class="print-only"
+                      >— {{ project.github }}</span
+                    >
+                  </dd>
+                </template>
+              </dl>
+            </section>
+
             <!-- Work Experience -->
             <section class="mb-4">
               <h2 class="section-title">{{ t.sections.experience }}</h2>
@@ -221,29 +332,15 @@
                 <div class="text-muted small mb-2">
                   {{ job.location }} · {{ job.sector }} · {{ job.size }}
                 </div>
-                <p
-                  v-for="(para, i) in job.description"
-                  :key="i"
-                  class="small mb-1"
-                >
-                  {{ para }}
-                </p>
-              </div>
-            </section>
-
-            <!-- Education -->
-            <section class="mb-4">
-              <h2 class="section-title">{{ t.sections.education }}</h2>
-              <div
-                v-for="edu in t.education"
-                :key="edu.institution"
-                class="mb-3"
-              >
-                <div class="text-muted small">{{ edu.period }}</div>
-                <h3 class="fs-6 fw-bold mb-0">{{ edu.institution }}</h3>
-                <div class="text-muted small">
-                  {{ edu.location }} · {{ edu.level }}
-                </div>
+                <ul class="small mb-0 ps-3">
+                  <li
+                    v-for="(para, i) in job.description"
+                    :key="i"
+                    class="mb-1"
+                  >
+                    {{ para }}
+                  </li>
+                </ul>
               </div>
             </section>
 
@@ -312,6 +409,55 @@
                   </dd>
                 </template>
               </dl>
+            </section>
+
+            <!-- Education -->
+            <section class="mb-4 education-compact">
+              <h2 class="section-title">{{ t.sections.education }}</h2>
+              <p v-if="t.educationNote" class="small mb-2">
+                {{ t.educationNote }}
+              </p>
+              <div
+                v-for="edu in t.education"
+                :key="edu.institution"
+                class="small text-muted"
+              >
+                {{ edu.institution }}, {{ edu.location }} — {{ edu.level }} ({{
+                edu.period }})
+              </div>
+            </section>
+
+            <!-- CTA -->
+            <section
+              class="cta-box rounded-3 p-4 text-center print-hidden"
+              v-if="t.cta"
+            >
+              <h2 class="fs-5 fw-bold mb-2">{{ t.cta.title }}</h2>
+              <p class="small mb-3">{{ t.cta.text }}</p>
+              <div class="d-flex flex-wrap justify-content-center gap-2">
+                <a
+                  :href="'mailto:' + t.personal.email"
+                  class="btn btn-primary btn-sm"
+                >
+                  <i class="fa-solid fa-envelope me-1"></i>{{ t.cta.email }}
+                </a>
+                <a
+                  v-if="t.personal.linkedin"
+                  :href="t.personal.linkedin"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn btn-outline-primary btn-sm"
+                >
+                  <i class="fa-brands fa-linkedin me-1"></i>LinkedIn
+                </a>
+                <button
+                  type="button"
+                  class="btn btn-outline-primary btn-sm"
+                  @click="downloadPDF"
+                >
+                  <i class="fa-solid fa-download me-1"></i>{{ t.cta.download }}
+                </button>
+              </div>
             </section>
           </main>
         </div>
