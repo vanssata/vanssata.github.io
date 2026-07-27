@@ -26,7 +26,9 @@
     "relocation": "Open to relocation within Bulgaria",
     "email": "ivan.kakurov@gmail.com",
     "phone": "+359 882 647 071",
-    "github": "https://github.com/vanssata"
+    "phone2": "+359 878 525 246",
+    "github": "https://github.com/vanssata",
+    "site": "https://vanssata.github.io/"
   },
   "languages": [
     { "name": "Bulgarian", "level": "Native" },

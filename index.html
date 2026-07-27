@@ -144,6 +144,9 @@
               <a :href="'tel:' + t.personal.phone" class="sidebar-info-item">
                 <i class="fa-solid fa-phone text-muted me-2"></i>{{
                 t.personal.phone }}
+              </a><a :href="'tel:' + t.personal.phone2" class="sidebar-info-item">
+                <i class="fa-solid fa-phone text-muted me-2"></i>{{
+                t.personal.phone2 }}
               </a>
               <a
                 :href="t.personal.github"
@@ -152,6 +155,14 @@
                 class="sidebar-info-item"
               >
                 <i class="fa-brands fa-github text-muted me-2"></i>GitHub
+              </a>
+              <a
+                :href="t.personal.site"
+                target="_blank"
+                rel="noopener"
+                class="sidebar-info-item"
+              >
+                <i class="fa-solid fa-globe text-muted me-2"></i> {{ t.personal.site }}
               </a>
             </div>
 
