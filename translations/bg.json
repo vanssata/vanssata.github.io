@@ -147,7 +147,7 @@
         "url": "https://github.com/vanssata/claude-agentic-sdlc-module",
         "github": "https://github.com/vanssata/claude-agentic-sdlc-module",
         "name": "Claude Agentic SDLC ",
-        "description": "Host-wide model, effort and context routing for Claude Code, plus agentic engineering infrastructure for existing production codebases — the kind with legacy code, undocumented business rules, historical workarounds and behaviour that customers depend on right now."
+        "description": "Маршрутизиране на модели, ниво на reasoning effort и контекст на ниво хост за Claude Code, както и агентна инженерна инфраструктура за съществуващи продукционни кодови бази — от онзи тип с legacy код, недокументирани бизнес правила, исторически натрупани workaround-и и поведение на системата, на което клиентите разчитат в момента."
       },
       {
         "url": "https://plugins.jetbrains.com/plugin/33150-claude-subscription-acp-agent",
