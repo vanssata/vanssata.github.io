@@ -144,6 +144,12 @@
     "note": "Проектите по-долу са разработени с AI инструменти (Claude, Codex, JetBrains Junie), в комбинация със собствен tooling и персонализирани MCP команди.",
     "items": [
       {
+        "url": "https://github.com/vanssata/claude-agentic-sdlc-module",
+        "github": "https://github.com/vanssata/claude-agentic-sdlc-module",
+        "name": "Claude Agentic SDLC ",
+        "description": "Host-wide model, effort and context routing for Claude Code, plus agentic engineering infrastructure for existing production codebases — the kind with legacy code, undocumented business rules, historical workarounds and behaviour that customers depend on right now."
+      },
+      {
         "url": "https://plugins.jetbrains.com/plugin/33150-claude-subscription-acp-agent",
         "github": "https://github.com/vanssata/jetbrains-claude-subscription",
         "name": "Claude Subscription ACP Agent — JetBrains плъгин",
