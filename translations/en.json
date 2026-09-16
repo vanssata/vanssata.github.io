@@ -146,7 +146,7 @@
       {
         "url": "https://github.com/vanssata/claude-agentic-sdlc-module",
         "github": "https://github.com/vanssata/claude-agentic-sdlc-module",
-        "name": "Claude Agentic SDLC ",
+        "name": "Claude Agentic SDLC",
         "description": "Host-wide model, effort and context routing for Claude Code, plus agentic engineering infrastructure for existing production codebases — the kind with legacy code, undocumented business rules, historical workarounds and behaviour that customers depend on right now."
       },
       {
