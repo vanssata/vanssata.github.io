@@ -1,7 +1,7 @@
 {
   "meta": {
     "lang": "bg",
-    "title": "Иван Какъров – Senior PHP Developer"
+    "title": "Иван Какъров – Software Engineer"
   },
   "nav": {
     "download": "Изтегли CV",
@@ -21,11 +21,11 @@
   },
   "personal": {
     "name": "Иван Йорданов Какъров",
-    "tagline": "Senior PHP Developer · Full-Stack · над 13 години в e-commerce",
+    "tagline": "Software Engineer · над 13 години PHP и e-commerce · GitOps · AI-native разработка",
     "location": "София, България",
     "availability": "Отворен за нови възможности — remote / hybrid / on-site",
     "relocation": "Възможност за релокация в рамките на България",
-    "linkedin": "",
+    "linkedin": "https://www.linkedin.com/in/ivan-kakurov-55356a29",
     "email": "ivan.kakurov@gmail.com",
     "phone": "+359 882 647 071",
     "phone2": "+359 878 525 246",
@@ -36,7 +36,7 @@
     { "name": "Български", "level": "Роден" },
     { "name": "Английски", "level": "Професионално работно ниво (ежедневна писмена и техническа комуникация)" }
   ],
-  "summary": "Senior PHP разработчик с над 13 години опит в изграждането и поддръжката на сложни e-commerce платформи (Symfony, Sylius, Magento 2, Shopware 6) — от архитектурата и платежните интеграции (15+ доставчика) до ERP/CRM синхронизацията и CI/CD. Автор на open-source плъгини за JetBrains и Sylius. Ежедневна работа с AI инструменти — собствени MCP команди, E2E тестове с AI и сигурен, оптимизиран процес за AI-асистирана разработка.",
+  "summary": "Софтуерен инженер с над 13 години опит в цялостното изграждане и поддръжка на критични продукционни e-commerce платформи (Symfony, Sylius, Magento 2, Shopware 6): архитектура, API и моделиране на данни, 15 платежни интеграции, ERP/CRM синхронизация и GitOps доставка върху Kubernetes с Argo CD. Разработва функционалности spec-first с AI агенти и преглежда всеки план, тест и diff преди пускане. Автор на open-source плъгини за JetBrains и Sylius и на agentic SDLC процес за legacy кодови бази.",
   "experience": [
     {
       "period": "Август 2019 – до момента",
@@ -47,10 +47,13 @@
       "sector": "Автомобилна индустрия, авто-услуги",
       "size": "150–200 служители",
       "description": [
-        "Изграждане и цялостна поддръжка на глобалната e-commerce платформа abrites.com — 4 независими юридически лица, динамично ценообразуване за всеки клиент и 15 интегрирани платежни доставчика, 8 от които внедрени от нулата заради специфични регионални изисквания.",
-        "Проектиране и внедряване на валидация и нормализация на данни от разнородни външни източници, включително свързване на обекти между различни ERP схеми, които нямат директна връзка помежду си.",
-        "Поддръжка на вътрешна ERP/CRM система (Python/Django + PostgreSQL), собствена CMS на базата на Symfony, система за управление на събития, REST API (Django REST Framework + Swagger), CI/CD процеси (GitLab CI) и интеграция с Dolibarr ERP.",
-        "Въвеждане на end-to-end тестове с AI инструменти (Claude, Codex, Junie) и на сигурен, оптимизиран vibe coding процес за разработка на нови функционалности."
+        "Отговарям за архитектурата и цялостната разработка на глобалната e-commerce платформа abrites.com — 4 независими юридически лица, динамично ценообразуване за всеки клиент и 15 интегрирани платежни доставчика, 8 от които внедрени от нулата заради специфични регионални изисквания.",
+        "Интегрирах собствения си open-source проект Claude Agentic SDLC в кодовите бази на Abrites, както за текущата платформа, така и за нови проекти: всяка промяна получава ниво на риск, което определя проверките за review, сигурност и тестове, а защитни hooks пазят legacy поведението.",
+        "Разработвам функционалности spec-first с AI агенти (Claude Code, Codex, Junie): нищо не се merge-ва, преди да одобря плана, тестовете и diff-а, а повтарящите се корекции от review стават инструкции за агентите, skills и hooks.",
+        "Изградих GitOps платформа за доставка върху Kubernetes: един общ Helm chart за всички проекти, Argo CD, който синхронизира от self-hosted GitLab с CI runners, фиксирани и тествани за съвместимост версии, и изолирани runtime среди за legacy приложенията.",
+        "Проектиране на модела на данните, валидацията и нормализацията на данни от разнородни външни източници, включително свързване на обекти между различни ERP схеми, които нямат директна връзка помежду си.",
+        "Изградих модулна дизайн система по Figma: Sass design tokens, еталонен HTML и Stimulus контролери на TypeScript, покрити с Vitest, Playwright и axe тестове за достъпност.",
+        "Поддръжка на вътрешна ERP/CRM система (Python/Django + PostgreSQL), собствена CMS на базата на Symfony, система за управление на събития, REST API (Django REST Framework + Swagger), CI/CD процеси (GitLab CI) и интеграция с Dolibarr ERP."
       ]
     },
     {
@@ -63,7 +66,8 @@
       "size": "10–20 служители",
       "description": [
         "Работа по мащабни и сложни e-commerce проекти с Magento (Adobe Commerce) в тясно партньорство с холандската компания Diract.",
-        "Персонализация на основната функционалност, разработка на B2B модули и процеси, редизайн на checkout процеса и фактурирането."
+        "Персонализация на основната функционалност, разработка на B2B модули и процеси, редизайн на checkout процеса и фактурирането.",
+        "Изграждане на CI/CD production процеса с Docker: контейнеризирани среди, автоматизирани build и тест pipeline-и и deployment към Linode сървъри."
       ]
     },
     {
@@ -101,7 +105,7 @@
   ],
   "cta": {
     "title": "Свържете се с мен",
-    "text": "Интересува ви съвместна работа? Пишете ми — с удоволствие ще обсъдя senior PHP / e-commerce позиции.",
+    "text": "Интересува ви съвместна работа? Пишете ми — с удоволствие ще обсъдя senior инженерни позиции.",
     "email": "Пишете ми",
     "download": "Изтеглете CV"
   },
@@ -110,44 +114,44 @@
       "title": "Backend",
       "groups": [
         { "label": "Езици", "items": ["PHP", "Python", "Bash", "JavaScript"] },
-        { "label": "Frameworks", "items": ["Symfony", "API Platform", "Laravel", "CodeIgniter", "Zend Framework 2", "Doctrine", "Django"] },
+        { "label": "Frameworks", "items": ["Symfony", "Laravel", "API Platform", "Doctrine", "Django", "CodeIgniter"] },
         { "label": "CMS", "items": ["WordPress", "Joomla", "DjangoCMS"] },
         { "label": "E-commerce", "items": ["Sylius", "Magento 2", "Shopware", "OpenCart"] },
-        { "label": "Бази данни", "items": ["MySQL", "MariaDB", "PerconaDB", "SQLite", "Redis"] },
+        { "label": "Бази данни", "items": ["PostgreSQL", "MySQL", "MariaDB", "PerconaDB", "SQLite", "Redis"] },
         { "label": "Кеширане & Опашки", "items": ["PSR-6", "Varnish", "RabbitMQ", "AMQP"] }
       ]
     },
     "frontend": {
       "title": "Frontend",
       "groups": [
-        { "label": "JavaScript", "items": ["jQuery", "Vue.js", "React", "Alpine.js", "@hotwired/Stimulus", "@hotwired/Turbo", "KnockoutJS"] },
-        { "label": "CSS / Build", "items": ["SCSS", "Bootstrap 5", "Semantic UI", "Bulma", "webpack", "yarn"] }
+        { "label": "JavaScript", "items": ["TypeScript", "Vue.js", "React", "@hotwired/Stimulus", "@hotwired/Turbo", "Alpine.js", "jQuery", "KnockoutJS"] },
+        { "label": "CSS / Build", "items": ["SCSS", "Bootstrap 5", "Twig", "Design tokens", "Shopware 6 themes", "Vite", "webpack", "yarn"] }
       ]
     },
     "devops": {
       "title": "DevOps & CI/CD",
       "groups": [
+        { "label": "Kubernetes & GitOps", "items": ["Kubernetes", "Helm", "Argo CD", "GitOps", "k3d", "Traefik"] },
         { "label": "Контейнери", "items": ["Docker", "Docker Compose", "Docker Swarm"] },
-        { "label": "CI/CD", "items": ["GitLab CI", "Bash scripting"] }
+        { "label": "CI/CD", "items": ["GitLab CI", "Linode", "Bash scripting"] }
       ]
     },
     "ai": {
-      "title": "AI & Инструменти за разработчици",
+      "title": "AI & Agentic Engineering",
       "groups": [
         { "label": "AI Асистенти", "items": ["Anthropic Claude", "GitHub Copilot (Codex)", "JetBrains Junie"] },
-        { "label": "AI инструменти & MCP", "items": ["Собствени MCP команди", "Собствен AI tooling", "E2E тестове с AI"] },
-        { "label": "Подход", "items": ["Силен фокус върху анализа на проблема и проектирането на решението — опит в превръщането на сложни бизнес изисквания в прецизни технически решения и в ефективното използване на AI инструменти за самостоятелна и бърза разработка."], "paragraph": true }
+        { "label": "Agentic Engineering", "items": ["Agentic SDLC процеси", "Собствени агенти, skills и hooks", "Собствени MCP команди", "E2E тестове с AI (Playwright)"] }
       ]
     }
   },
   "personalProjects": {
-    "note": "Проектите по-долу са разработени с AI инструменти (Claude, Codex, JetBrains Junie), в комбинация със собствен tooling и персонализирани MCP команди.",
+    "note": "Проектите по-долу са разработени с AI агенти (Claude Code, Codex, JetBrains Junie), собствен tooling и персонализирани MCP команди.",
     "items": [
       {
         "url": "https://github.com/vanssata/claude-agentic-sdlc-module",
         "github": "https://github.com/vanssata/claude-agentic-sdlc-module",
         "name": "Claude Agentic SDLC",
-        "description": "Маршрутизиране на модели, ниво на reasoning effort и контекст на ниво хост за Claude Code, както и агентна инженерна инфраструктура за съществуващи продукционни кодови бази — от онзи тип с legacy код, недокументирани бизнес правила, исторически натрупани workaround-и и поведение на системата, на което клиентите разчитат в момента."
+        "description": "Agentic процес за доставка на софтуер за Claude Code, създаден за legacy продукционни кодови бази. Всяка промяна получава ниво на риск (T0–T5), което определя проверките ѝ — агенти за планиране, review, сигурност и тестове, плюс защитни hooks срещу промени извън обхвата и push към защитени клонове — и завършва с човешко одобрение."
       },
       {
         "url": "https://plugins.jetbrains.com/plugin/33150-claude-subscription-acp-agent",
@@ -159,12 +163,12 @@
         "url": "https://addons.sylius.com/en_US/products/vanssa-sylius-slider",
         "github": "https://github.com/vanssata/sylius-slider-plugin",
         "name": "Vanssa Sylius Slider",
-        "description": "Многофункционален responsive слайдер плъгин за Sylius 2, публикуван в официалния Sylius Addons магазин — слайдове с изображения и видео с превод на няколко езика, преглед на живо в админ панела, Symfony UX рендиране, Twig Hooks и опционални CMS интеграции."
+        "description": "Многофункционален responsive слайдер плъгин за Sylius 2, публикуван в официалния Sylius Addons магазин — слайдове с изображения и видео с превод на няколко езика, преглед на живо в админ панела, Symfony UX рендиране, Twig Hooks и опционални CMS интеграции. Тестван с PHPUnit, Behat и Playwright; CI в GitHub Actions. Изцяло написан от AI агенти през моя agentic SDLC процес: аз писах спецификациите и преглеждах всеки план и diff."
       },
       {
         "url": "https://breezy-bg.com",
         "name": "breezy-bg.com",
-        "description": "E-commerce платформа върху Shopware 6.5 със собствени модули, които изцяло променят концепцията на количката и checkout процеса. Съобразена с изискванията на българското законодателство за електронна търговия."
+        "description": "E-commerce платформа върху Shopware 6.5 със собствени модули, които изцяло променят концепцията на количката и checkout процеса. Съобразена с изискванията на българското законодателство за електронна търговия. Работи със собствена storefront тема: Twig шаблони, SCSS, JavaScript storefront плъгини и конфигурация на темата в админ панела."
       },
       {
         "url": "https://vanssata.github.io/",

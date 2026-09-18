@@ -1,0 +1,113 @@
+{
+  "folders": [
+    {
+      "name": "vanssata.github.io",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.formatOnSave": true,
+    "editor.rulers": [
+      80
+    ],
+    "files.eol": "\n",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "files.exclude": {
+      "**/.git": true,
+      "**/.idea": true
+    },
+    "search.exclude": {
+      "**/.idea": true,
+      "**/.claude": true,
+      "imgs": true
+    },
+    "files.associations": {
+      ".htmlhintrc": "json"
+    },
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[css]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "html.format.enable": false,
+    "html.validate.scripts": false,
+    "json.schemas": [
+      {
+        "fileMatch": [
+          "/.htmlhintrc"
+        ],
+        "url": "https://json.schemastore.org/htmlhint.json"
+      }
+    ]
+  },
+  "extensions": {
+    "recommendations": [
+      "esbenp.prettier-vscode",
+      "htmlhint.vscode-htmlhint",
+      "Anthropic.claude-code"
+    ]
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Preview (localhost:8080)",
+        "type": "shell",
+        "command": "python3 -m http.server 8080",
+        "isBackground": true,
+        "problemMatcher": [],
+        "presentation": {
+          "reveal": "silent",
+          "panel": "dedicated"
+        },
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      },
+      {
+        "label": "Check translations in lockstep",
+        "type": "shell",
+        "command": "diff <(jq -r '[paths|map(tostring)|join(\".\")]|sort|.[]' translations/en.json) <(jq -r '[paths|map(tostring)|join(\".\")]|sort|.[]' translations/bg.json) && echo OK",
+        "problemMatcher": [],
+        "presentation": {
+          "reveal": "always",
+          "panel": "shared"
+        }
+      },
+      {
+        "label": "Lint HTML",
+        "type": "shell",
+        "command": "npx htmlhint index.html",
+        "problemMatcher": []
+      }
+    ]
+  },
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Open site in Chrome",
+        "type": "chrome",
+        "request": "launch",
+        "url": "http://localhost:8080",
+        "webRoot": "${workspaceFolder}",
+        "preLaunchTask": "Preview (localhost:8080)"
+      }
+    ]
+  }
+}
