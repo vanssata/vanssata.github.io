@@ -36,7 +36,7 @@
     { "name": "Български", "level": "Роден" },
     { "name": "Английски", "level": "Професионално работно ниво (ежедневна писмена и техническа комуникация)" }
   ],
-  "summary": "Софтуерен инженер с над 13 години опит в цялостното изграждане и поддръжка на критични продукционни e-commerce платформи (Symfony, Sylius, Magento 2, Shopware 6): архитектура, API и моделиране на данни, 15 платежни интеграции, ERP/CRM синхронизация и GitOps доставка върху Kubernetes с Argo CD. Разработва функционалности spec-first с AI агенти и преглежда всеки план, тест и diff преди пускане. Автор на open-source плъгини за JetBrains и Sylius и на agentic SDLC процес за legacy кодови бази.",
+  "summary": "Софтуерен инженер с над 13 години опит в цялостното изграждане и поддръжка на критични продукционни e-commerce платформи (Symfony, Sylius, Magento 2, Shopware 6): архитектура, API и моделиране на данни, 15 платежни интеграции, ERP/CRM синхронизация и GitOps доставка върху Kubernetes с Argo CD. Разработва функционалности spec-first с AI агенти и преглежда всеки план, тест и diff преди пускане. Автор на open-source плъгини за JetBrains и Sylius и на cross-runtime agentic SDLC процес за legacy кодови бази.",
   "experience": [
     {
       "period": "Август 2019 – до момента",
@@ -148,10 +148,10 @@
     "note": "Проектите по-долу са разработени с AI агенти (Claude Code, Codex, JetBrains Junie), собствен tooling и персонализирани MCP команди.",
     "items": [
       {
-        "url": "https://github.com/vanssata/claude-agentic-sdlc-module",
+        "url": "https://vanssata.github.io/claude-agentic-sdlc-module/",
         "github": "https://github.com/vanssata/claude-agentic-sdlc-module",
         "name": "Claude Agentic SDLC",
-        "description": "Agentic процес за доставка на софтуер за Claude Code, създаден за legacy продукционни кодови бази. Всяка промяна получава ниво на риск (T0–T5), което определя проверките ѝ — агенти за планиране, review, сигурност и тестове, плюс защитни hooks срещу промени извън обхвата и push към защитени клонове — и завършва с човешко одобрение."
+        "description": "Agentic процес за доставка на софтуер за Claude Code и Codex, създаден за legacy продукционни кодови бази. Всяка промяна получава ниво на риск (T0–T5), което определя проверките ѝ — агенти за планиране, review, сигурност и тестове, плюс защитни hooks срещу промени извън обхвата и push към защитени клонове — и завършва с човешко одобрение. Маршрутизацията на моделите по ниво на риск свали разхода за ограничени (T2) промени с 32%, а разхода на заявка — с 8.3% за 7054 заявки."
       },
       {
         "url": "https://plugins.jetbrains.com/plugin/33150-claude-subscription-acp-agent",

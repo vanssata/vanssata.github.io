@@ -36,7 +36,7 @@
     { "name": "Bulgarian", "level": "Native" },
     { "name": "English", "level": "Professional working proficiency (daily written & technical communication)" }
   ],
-  "summary": "Software engineer with 13+ years of building and owning production-critical e-commerce platforms end-to-end (Symfony, Sylius, Magento 2, Shopware 6): architecture, API and data modeling, 15 payment integrations, ERP/CRM synchronization, and GitOps delivery on Kubernetes with Argo CD. Delivers features spec-first with AI agents and reviews every plan, test and diff before it ships. Author of open-source plugins for JetBrains and Sylius and of an agentic SDLC pipeline for legacy codebases.",
+  "summary": "Software engineer with 13+ years of building and owning production-critical e-commerce platforms end-to-end (Symfony, Sylius, Magento 2, Shopware 6): architecture, API and data modeling, 15 payment integrations, ERP/CRM synchronization, and GitOps delivery on Kubernetes with Argo CD. Delivers features spec-first with AI agents and reviews every plan, test and diff before it ships. Author of open-source plugins for JetBrains and Sylius and of a cross-runtime agentic SDLC pipeline for legacy codebases.",
   "experience": [
     {
       "period": "August 2019 – present",
@@ -148,10 +148,10 @@
     "note": "Built with AI agents (Claude Code, Codex, JetBrains Junie), my own tooling and custom MCP commands.",
     "items": [
       {
-        "url": "https://github.com/vanssata/claude-agentic-sdlc-module",
+        "url": "https://vanssata.github.io/claude-agentic-sdlc-module/",
         "github": "https://github.com/vanssata/claude-agentic-sdlc-module",
         "name": "Claude Agentic SDLC",
-        "description": "Agentic delivery pipeline for Claude Code, built for legacy production codebases. Each change gets a risk tier (T0–T5) that sets its gates — planning, review, security and test agents, plus guard hooks against out-of-scope edits and pushes to protected branches — and ends at human approval."
+        "description": "Agentic delivery pipeline for Claude Code and Codex, built for legacy production codebases. Each change gets a risk tier (T0–T5) that sets its gates — planning, review, security and test agents, plus guard hooks against out-of-scope edits and pushes to protected branches — and ends at human approval. Tier-based model routing cut the cost of contained (T2) changes by 32%, and cost per request by 8.3% across 7,054 requests."
       },
       {
         "url": "https://plugins.jetbrains.com/plugin/33150-claude-subscription-acp-agent",
