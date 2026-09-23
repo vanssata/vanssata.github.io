@@ -1,15 +1,72 @@
-/* ── Variables ──────────────────────────────────────────── */
+/* ── Design tokens ──────────────────────────────────────── */
 :root {
-  --cv-accent: #286cd1;
-  --cv-sidebar-bg: #f0f4fa;
-  --cv-section-border: #dee2e6;
+  /* Accent: deep teal. Alternates that keep the same weight —
+     #1F4F8F (ink blue), #8A3D1C (clay), #4A3A7A (plum). */
+  --cv-accent: #14625b;
+  --cv-accent-rgb: 20, 98, 91;
+  --cv-on-accent: #ffffff;
+  --cv-sidebar-bg: #f4f2ee;
+  --cv-section-border: #e0dcd4;
+  --cv-rule: #cfc9be;
   --cv-max-width: 1000px;
+
+  /* Type scale */
+  --cv-fs-micro: 0.6875rem; /* 11px — section eyebrows */
+  --cv-fs-xs: 0.78125rem; /* 12.5px — meta lines */
+  --cv-fs-sm: 0.84375rem; /* 13.5px — sidebar, chips */
+  --cv-fs-base: 0.9375rem; /* 15px — body copy */
+  --cv-fs-lead: 1rem; /* 16px — profile paragraph */
 }
 
 [data-bs-theme="dark"] {
-  --cv-accent: #60a5fa;
-  --cv-sidebar-bg: #1a2332;
-  --cv-section-border: #2e3f55;
+  --cv-accent: #5fc9b9;
+  --cv-accent-rgb: 95, 201, 185;
+  --cv-on-accent: #10211f;
+  --cv-sidebar-bg: #1a1d1f;
+  --cv-section-border: #32383c;
+  --cv-rule: #3f464b;
+}
+
+/* ── Bootstrap bridge ───────────────────────────────────── */
+/* Bootstrap compiles .btn-* colours into per-component vars, so setting
+   --bs-primary alone does nothing. Point the components at the accent.
+   Anchors read --bs-link-color-RGB, not --bs-link-color — both are set. */
+:root,
+[data-bs-theme="light"],
+[data-bs-theme="dark"] {
+  --bs-link-color: var(--cv-accent);
+  --bs-link-hover-color: var(--cv-accent);
+  --bs-link-color-rgb: var(--cv-accent-rgb);
+  --bs-link-hover-color-rgb: var(--cv-accent-rgb);
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--cv-accent);
+  --bs-btn-border-color: var(--cv-accent);
+  --bs-btn-color: var(--cv-on-accent);
+  --bs-btn-hover-bg: var(--cv-accent);
+  --bs-btn-hover-border-color: var(--cv-accent);
+  --bs-btn-hover-color: var(--cv-on-accent);
+  --bs-btn-active-bg: var(--cv-accent);
+  --bs-btn-active-border-color: var(--cv-accent);
+  --bs-btn-active-color: var(--cv-on-accent);
+  --bs-btn-disabled-bg: var(--cv-accent);
+  --bs-btn-disabled-border-color: var(--cv-accent);
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--cv-accent);
+  --bs-btn-border-color: var(--cv-accent);
+  --bs-btn-hover-bg: var(--cv-accent);
+  --bs-btn-hover-border-color: var(--cv-accent);
+  --bs-btn-hover-color: var(--cv-on-accent);
+  --bs-btn-active-bg: var(--cv-accent);
+  --bs-btn-active-border-color: var(--cv-accent);
+  --bs-btn-active-color: var(--cv-on-accent);
+}
+
+.text-primary {
+  color: var(--cv-accent) !important;
 }
 
 /* ── Base ───────────────────────────────────────────────── */
@@ -18,7 +75,15 @@
 }
 
 body {
-  font-family: Roboto, sans-serif;
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Bootstrap's .small is used throughout the markup — retune it once
+   here instead of sprinkling font sizes across the template. */
+.cv-page .small {
+  font-size: var(--cv-fs-sm);
 }
 
 /* ── CV Page wrapper ────────────────────────────────────── */
@@ -31,30 +96,38 @@ body {
   background-color: var(--cv-sidebar-bg);
 }
 
+.cv-sidebar h1 {
+  letter-spacing: -0.015em;
+}
+
 .profile-photo {
-  width: 120px;
-  height: 120px;
+  width: 116px;
+  height: 116px;
   object-fit: cover;
-  border: 3px solid var(--cv-accent);
+  border: 2px solid var(--cv-accent);
+  box-shadow: 0 0 0 5px var(--cv-sidebar-bg);
+  outline: 1px solid var(--cv-rule);
+  outline-offset: 4px;
 }
 
 .sidebar-section-title {
-  font-size: 0.7rem;
+  font-size: var(--cv-fs-micro);
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--cv-accent);
-  margin-bottom: 0.5rem;
-  margin-top: 1.25rem;
-  padding-bottom: 0.25rem;
+  margin-bottom: 0.6rem;
+  margin-top: 1.5rem;
+  padding-bottom: 0.35rem;
   border-bottom: 1px solid var(--cv-section-border);
 }
 
 .sidebar-info-item {
   display: flex;
   align-items: flex-start;
-  font-size: 0.82rem;
-  padding: 2px 0;
+  font-size: var(--cv-fs-sm);
+  line-height: 1.5;
+  padding: 3px 0;
   color: inherit;
   text-decoration: none;
   word-break: break-word;
@@ -62,9 +135,13 @@ body {
 
 .sidebar-info-item i {
   flex-shrink: 0;
-  margin-top: 2px;
+  margin-top: 3px;
   width: 18px;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
+}
+
+a.sidebar-info-item {
+  transition: color 0.12s ease;
 }
 
 a.sidebar-info-item:hover {
@@ -73,6 +150,7 @@ a.sidebar-info-item:hover {
 
 .availability-item {
   color: var(--cv-accent);
+  line-height: 1.45;
 }
 
 /* Keep sidebar content in view while the main column scrolls */
@@ -82,6 +160,8 @@ a.sidebar-info-item:hover {
     top: 72px; /* below the sticky navbar */
     max-height: calc(100vh - 88px);
     overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--cv-rule) transparent;
   }
 }
 
@@ -90,29 +170,77 @@ a.sidebar-info-item:hover {
   border-left: 1px solid var(--cv-section-border);
 }
 
+.cv-main p,
+.cv-main li {
+  line-height: 1.6;
+}
+
+/* Profile paragraph carries the first impression — give it more size
+   than the rest of the body copy. */
+.cv-main section:first-of-type p {
+  font-size: var(--cv-fs-lead);
+  line-height: 1.62;
+}
+
 .section-title {
-  font-size: 1.2rem;
+  position: relative;
+  font-size: var(--cv-fs-micro);
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--cv-accent);
-  padding-bottom: 0.4rem;
-  margin-bottom: 1rem;
-  border-bottom: 2px solid var(--cv-accent);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.1rem;
+  border-bottom: 1px solid var(--cv-section-border);
+}
+
+/* Short accent tick under the rule — carries the colour without the
+   full-width 2px bar shouting over every heading. */
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 2.25rem;
+  height: 2px;
+  background-color: var(--cv-accent);
+}
+
+.experience-item h3 {
+  letter-spacing: -0.01em;
+}
+
+/* Skill category headings are a sub-level: keep them under the job
+   titles, which stay the primary scan target in the main column. */
+#skills h3 {
+  font-size: var(--cv-fs-base);
+  letter-spacing: 0.01em;
+}
+
+#skills .fw-medium {
+  letter-spacing: 0.02em;
 }
 
 .experience-item + .experience-item {
-  padding-top: 1rem;
+  padding-top: 1.35rem;
   border-top: 1px solid var(--cv-section-border);
+}
+
+/* Dates, locations, company meta — one quiet register. */
+.experience-item > .text-muted {
+  font-size: var(--cv-fs-xs);
+  letter-spacing: 0.01em;
+  font-variant-numeric: tabular-nums;
 }
 
 /* ── Skill chips ────────────────────────────────────────── */
 .skill-chip {
   display: inline-flex;
   align-items: center;
-  gap: 3px;
-  font-size: 0.8rem;
+  gap: 4px;
+  font-size: var(--cv-fs-sm);
   white-space: nowrap;
+  line-height: 1.9;
 }
 
 .skill-chip::after {
@@ -125,7 +253,7 @@ a.sidebar-info-item:hover {
 }
 
 .skill-chip i {
-  font-size: 1rem;
+  font-size: 0.95rem;
   vertical-align: middle;
 }
 
@@ -134,19 +262,37 @@ a.sidebar-info-item:hover {
   border-radius: 2px;
 }
 
+/* Key-skill badges in the sidebar */
+.cv-sidebar .badge {
+  font-size: var(--cv-fs-xs);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  padding: 0.35em 0.7em;
+}
+
 /* ── Projects list ──────────────────────────────────────── */
 .projects-list {
-  font-size: 0.85rem;
+  font-size: var(--cv-fs-sm);
 }
 
 .projects-list dt {
-  font-weight: 500;
-  margin-top: 0.4rem;
+  font-weight: 600;
+  margin-top: 0.6rem;
+  letter-spacing: -0.005em;
+}
+
+.projects-list dt a {
+  text-decoration: none;
+}
+
+.projects-list dt a:hover {
+  text-decoration: underline;
 }
 
 .projects-list dd {
   margin-left: 1rem;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.25rem;
+  line-height: 1.55;
   color: var(--bs-secondary-color);
 }
 
@@ -176,13 +322,16 @@ a.sidebar-info-item:hover {
   /* Force light theme regardless of dark mode setting */
   :root,
   [data-bs-theme="dark"] {
-    --cv-accent: #286cd1;
-    --cv-sidebar-bg: #f0f4fa;
-    --cv-section-border: #dee2e6;
+    --cv-accent: #14625b;
+    --cv-accent-rgb: 20, 98, 91;
+    --cv-on-accent: #ffffff;
+    --cv-sidebar-bg: #f4f2ee;
+    --cv-section-border: #e0dcd4;
+    --cv-rule: #cfc9be;
     --bs-body-bg: #ffffff;
     --bs-body-color: #212529;
-    --bs-secondary-color: #6c757d;
-    --bs-border-color: #dee2e6;
+    --bs-secondary-color: #5c5750;
+    --bs-border-color: #e0dcd4;
     color-scheme: light;
   }
 
@@ -220,7 +369,7 @@ a.sidebar-info-item:hover {
     display: table-cell !important;
     width: 33% !important;
     vertical-align: top !important;
-    background: #f0f4fa !important;
+    background: #f4f2ee !important;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
@@ -229,8 +378,13 @@ a.sidebar-info-item:hover {
     display: table-cell !important;
     width: 67% !important;
     vertical-align: top !important;
-    border-left: 1px solid #dee2e6 !important;
+    border-left: 1px solid #e0dcd4 !important;
     border-top: none !important;
+  }
+
+  .profile-photo {
+    box-shadow: none !important;
+    outline: none !important;
   }
 
   a {
@@ -239,7 +393,7 @@ a.sidebar-info-item:hover {
   }
 
   .text-muted {
-    color: #6c757d !important;
+    color: #5c5750 !important;
   }
 
   /* Let long jobs split across pages — forcing them whole pushed a tall item
