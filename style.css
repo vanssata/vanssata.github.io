@@ -542,9 +542,15 @@ a.sidebar-info-item:hover {
     --cv-fs-xs: 0.75rem;
   }
 
-  /* The second role keeps two lines; the two oldest keep only the fact
-     that they happened — 2013–2018 is arc, not evidence. */
-  :root[data-cv="short"] .experience-item:nth-of-type(2) li:nth-child(n + 3) {
+  /* The current role keeps all four bullets; the second keeps one, and the
+     two oldest keep only the fact that they happened — 2013–2018 is arc,
+     not evidence. */
+  :root[data-cv="short"] .experience-item:nth-of-type(2) li:nth-child(n + 2) {
+    display: none !important;
+  }
+
+  /* Without the project descriptions this line has nothing to introduce. */
+  :root[data-cv="short"] #personal-projects > p {
     display: none !important;
   }
 
@@ -578,10 +584,6 @@ a.sidebar-info-item:hover {
 
   :root[data-cv="short"] #personal-projects dt {
     margin-top: 0.15rem;
-  }
-
-  :root[data-cv="short"] .experience-item:first-of-type li:nth-child(n + 4) {
-    display: none !important;
   }
 
   /* The client sites stay as a single run of names, not a list of
