@@ -124,14 +124,22 @@
           </button>
 
           <!-- Download PDF -->
-          <button
-            type="button"
-            class="btn btn-sm btn-outline-primary"
-            @click="downloadPDF"
-            v-if="t.nav"
-          >
-            <i class="fa-solid fa-download me-1"></i>{{ t.nav.download }}
-          </button>
+          <div class="btn-group btn-group-sm" role="group" v-if="t.nav">
+            <button
+              type="button"
+              class="btn btn-primary"
+              @click="downloadPDF('short')"
+            >
+              <i class="fa-solid fa-download me-1"></i>{{ t.nav.downloadShort }}
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-primary"
+              @click="downloadPDF('full')"
+            >
+              {{ t.nav.download }}
+            </button>
+          </div>
         </div>
       </nav>
 
@@ -250,14 +258,16 @@
               </div>
 
               <!-- Key Skills -->
-              <h2 class="sidebar-section-title">{{ t.sections.skills }}</h2>
-              <div class="d-flex flex-wrap gap-1">
-                <span
-                  v-for="skill in keySkills"
-                  :key="skill"
-                  class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill"
-                  >{{ skill }}</span
-                >
+              <div class="sidebar-skills">
+                <h2 class="sidebar-section-title">{{ t.sections.skills }}</h2>
+                <div class="d-flex flex-wrap gap-1">
+                  <span
+                    v-for="skill in keySkills"
+                    :key="skill"
+                    class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill"
+                    >{{ skill }}</span
+                  >
+                </div>
               </div>
             </div>
           </aside>
@@ -265,9 +275,51 @@
           <!-- ── Main ──────────────────────────────────────── -->
           <main class="col-lg-8 cv-main p-4">
             <!-- Profile -->
-            <section class="mb-4" v-if="t.summary">
+            <section id="profile" class="mb-4" v-if="t.summary">
               <h2 class="section-title">{{ t.sections.profile }}</h2>
               <p class="small mb-0">{{ t.summary }}</p>
+            </section>
+
+            <!-- Work Experience -->
+            <section id="experience" class="mb-4">
+              <h2 class="section-title">{{ t.sections.experience }}</h2>
+              <div
+                v-for="job in t.experience"
+                :key="job.company"
+                class="experience-item mb-4"
+              >
+                <div class="text-muted small">{{ job.period }}</div>
+                <h3 class="fs-6 fw-bold mb-1">
+                  {{ job.role }}
+                  <span class="fw-normal">
+                    at
+                    <a
+                      v-if="job.companyUrl"
+                      :href="job.companyUrl"
+                      target="_blank"
+                      rel="noopener"
+                      class="print-hidden"
+                      >{{ job.company }}</a
+                    ><span v-if="job.companyUrl" class="print-only"
+                      >{{ job.company }}</span
+                    >
+                    <span v-else>{{ job.company }}</span>
+                  </span>
+                </h3>
+                <div v-if="job.scope" class="job-scope">{{ job.scope }}</div>
+                <div class="text-muted small mb-2">
+                  {{ job.location }} · {{ job.sector }} · {{ job.size }}
+                </div>
+                <ul class="small mb-0 ps-3">
+                  <li
+                    v-for="(para, i) in job.description"
+                    :key="i"
+                    class="mb-1"
+                  >
+                    {{ para }}
+                  </li>
+                </ul>
+              </div>
             </section>
 
             <!-- Personal Projects -->
@@ -314,47 +366,6 @@
               </dl>
             </section>
 
-            <!-- Work Experience -->
-            <section class="mb-4">
-              <h2 class="section-title">{{ t.sections.experience }}</h2>
-              <div
-                v-for="job in t.experience"
-                :key="job.company"
-                class="experience-item mb-4"
-              >
-                <div class="text-muted small">{{ job.period }}</div>
-                <h3 class="fs-6 fw-bold mb-1">
-                  {{ job.role }}
-                  <span class="fw-normal">
-                    at
-                    <a
-                      v-if="job.companyUrl"
-                      :href="job.companyUrl"
-                      target="_blank"
-                      rel="noopener"
-                      class="print-hidden"
-                      >{{ job.company }}</a
-                    ><span v-if="job.companyUrl" class="print-only"
-                      >{{ job.company }}</span
-                    >
-                    <span v-else>{{ job.company }}</span>
-                  </span>
-                </h3>
-                <div class="text-muted small mb-2">
-                  {{ job.location }} · {{ job.sector }} · {{ job.size }}
-                </div>
-                <ul class="small mb-0 ps-3">
-                  <li
-                    v-for="(para, i) in job.description"
-                    :key="i"
-                    class="mb-1"
-                  >
-                    {{ para }}
-                  </li>
-                </ul>
-              </div>
-            </section>
-
             <!-- Skills -->
             <section id="skills" class="mb-4">
               <h2 class="section-title">{{ t.sections.skills }}</h2>
@@ -364,6 +375,7 @@
                   v-for="group in category.groups"
                   :key="group.label"
                   class="mb-1"
+                  :class="{ 'skills-secondary': group.secondary }"
                 >
                   <span class="fw-medium text-muted small"
                     >{{ group.label }}:</span
@@ -423,7 +435,7 @@
             </section>
 
             <!-- Education -->
-            <section class="mb-4 education-compact">
+            <section id="education" class="mb-4 education-compact">
               <h2 class="section-title">{{ t.sections.education }}</h2>
               <p v-if="t.educationNote" class="small mb-2">
                 {{ t.educationNote }}
@@ -440,6 +452,7 @@
 
             <!-- CTA -->
             <section
+              id="cta"
               class="cta-box rounded-3 p-4 text-center print-hidden"
               v-if="t.cta"
             >
@@ -464,7 +477,7 @@
                 <button
                   type="button"
                   class="btn btn-outline-primary btn-sm"
-                  @click="downloadPDF"
+                  @click="downloadPDF('short')"
                 >
                   <i class="fa-solid fa-download me-1"></i>{{ t.cta.download }}
                 </button>

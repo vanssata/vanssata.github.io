@@ -7,7 +7,6 @@ const ICON_MAP = {
   // Backend languages
   PHP: "devicon-php-plain colored",
   Python: "devicon-python-plain colored",
-  JavaScript: "devicon-javascript-plain colored",
   Bash: "devicon-bash-plain colored",
   // Backend frameworks
   Symfony: "devicon-symfony-original colored",
@@ -43,7 +42,6 @@ const ICON_MAP = {
   "Docker Swarm": "devicon-docker-plain colored",
   "GitLab CI": "devicon-gitlab-plain colored",
   Linode: FAV("linode.com"),
-  "Bash scripting": "devicon-bash-plain colored",
   Kubernetes: "devicon-kubernetes-plain colored",
   Helm: "devicon-helm-original colored",
   "Argo CD": "devicon-argocd-plain colored",
@@ -55,8 +53,8 @@ const ICON_MAP = {
   "Vue.js": "devicon-vuejs-plain colored",
   React: "devicon-react-plain colored",
   "Alpine.js": "devicon-alpinejs-original colored",
-  "@hotwired/Stimulus": FAV("stimulus.hotwired.dev"),
-  "@hotwired/Turbo": FAV("turbo.hotwired.dev"),
+  Stimulus: FAV("stimulus.hotwired.dev"),
+  Turbo: FAV("turbo.hotwired.dev"),
   KnockoutJS: FAV("knockoutjs.com"),
   TypeScript: "devicon-typescript-plain colored",
   // CSS / Build
@@ -80,6 +78,17 @@ const ICON_MAP = {
   "Собствени MCP команди": FAV("modelcontextprotocol.io"),
   "AI-driven E2E testing (Playwright)": FAV("playwright.dev"),
   "E2E тестове с AI (Playwright)": FAV("playwright.dev"),
+  "Spec-driven development": FAV("anthropic.com"),
+  "Spec-driven разработка": FAV("anthropic.com"),
+  "Risk-tiered review gates": FAV("anthropic.com"),
+  "Review gates по ниво на риск": FAV("anthropic.com"),
+  "Context engineering": FAV("anthropic.com"),
+  "Model routing": FAV("anthropic.com"),
+  "Маршрутизация на модели": FAV("anthropic.com"),
+  "Token & cost budgeting": FAV("anthropic.com"),
+  "Бюджет за токени и разходи": FAV("anthropic.com"),
+  "Agent evals & benchmarking": FAV("playwright.dev"),
+  "Оценка и бенчмаркове на агенти": FAV("playwright.dev"),
 };
 
 createApp({
@@ -130,20 +139,44 @@ createApp({
 
     watch(darkMode, applyTheme);
 
-    const keySkills = computed(() => {
-      const s = t.value.skills;
-      if (!s) return [];
-      return [
-        ...(s.backend?.groups[0]?.items ?? []).slice(0, 4),
-        ...(s.backend?.groups[1]?.items ?? []).slice(0, 3),
-        ...(s.frontend?.groups[0]?.items ?? []).slice(0, 3),
-        ...(s.devops?.groups[0]?.items ?? []).slice(0, 2),
-        ...(s.ai?.groups[0]?.items ?? []),
-      ];
-    });
+    // Title and description live in the translations, so they follow the
+    // language instead of staying on whatever index.html shipped with.
+    watch(
+      t,
+      (v) => {
+        if (!v.meta) return;
+        if (v.meta.title) document.title = v.meta.title;
+        const desc = document.querySelector('meta[name="description"]');
+        if (desc && v.meta.description) {
+          desc.setAttribute("content", v.meta.description);
+        }
+      },
+      { immediate: true },
+    );
 
-    function downloadPDF() {
+    // Explicit list per language. The previous version sliced skill groups
+    // by position, so reordering a group silently changed these badges.
+    const keySkills = computed(() => t.value.keySkills ?? []);
+
+    // Print the light palette whatever the screen is showing. Printing from
+    // dark mode painted the page margins dark, because the canvas background
+    // follows the root element's colour scheme, not the print stylesheet.
+    // "short" is the two-page recruiter cut; everything it drops is still in
+    // the DOM, hidden by the print stylesheet, so there is one source of truth.
+    function downloadPDF(variant) {
+      const root = document.documentElement;
+      const was = root.getAttribute("data-bs-theme");
+      root.setAttribute("data-bs-theme", "light");
+      if (variant === "short") root.setAttribute("data-cv", "short");
+      const restore = () => {
+        if (was) root.setAttribute("data-bs-theme", was);
+        root.removeAttribute("data-cv");
+        window.removeEventListener("afterprint", restore);
+      };
+      window.addEventListener("afterprint", restore);
       window.print();
+      // Safari and some PDF backends never fire afterprint.
+      setTimeout(restore, 1000);
     }
 
     return { lang, darkMode, t, loading, keySkills, downloadPDF, ICON_MAP };
