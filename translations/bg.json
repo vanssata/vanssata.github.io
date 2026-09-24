@@ -1,8 +1,8 @@
 {
   "meta": {
     "lang": "bg",
-    "title": "Иван Какъров – Software Engineer",
-    "description": "Иван Какъров – Software Engineer с над 13 години опит в изграждането и поддръжката на сложни e-commerce платформи (Symfony, Sylius, Magento 2, Shopware 6). GitOps доставка върху Kubernetes и spec-driven процес с AI агенти. Автор на open-source плъгини. София, България."
+    "title": "Иван Какъров – Senior Software Engineer",
+    "description": "Иван Какъров – Senior Software Engineer с над 13 години опит в изграждането и поддръжката на сложни e-commerce платформи (Symfony, Sylius, Magento 2, Shopware 6). GitOps доставка върху Kubernetes и spec-driven процес с AI агенти. Автор на open-source плъгини. София, България."
   },
   "nav": {
     "download": "Пълно CV",
@@ -23,7 +23,7 @@
   },
   "personal": {
     "name": "Иван Йорданов Какъров",
-    "tagline": "Software Engineer · E-commerce и продукционни системи · PHP/Symfony · GitOps · Agentic Engineering",
+    "tagline": "Senior Software Engineer · E-commerce и продукционни системи · PHP/Symfony · GitOps · Agentic Engineering",
     "location": "София, България",
     "availability": "Отворен за нови възможности — remote / hybrid / on-site",
     "relocation": "Възможност за релокация в рамките на България",
@@ -43,19 +43,16 @@
     {
       "period": "Август 2019 – до момента",
       "role": "Senior PHP Developer",
-      "scope": "Platform Architecture · 5 домейна",
+      "scope": "Platform Architecture · Една платформа, 5 домейна",
       "company": "Abrites LTD",
       "companyUrl": "https://abrites.com",
       "location": "София",
       "sector": "Автомобилна индустрия, авто-услуги",
       "size": "90–100 служители",
       "description": [
-        "Отговарям за архитектурата и цялостната разработка на глобалната e-commerce платформа abrites.com — 4 независими юридически лица, динамично ценообразуване за всеки клиент и 15 интегрирани платежни доставчика, 8 от които внедрени от нулата заради специфични регионални изисквания.",
+        "Отговарям за архитектурата и цялостната разработка на глобалната e-commerce платформа abrites.com — една платформа, обслужваща B2B, B2C и B2B2C модели в 5 независими юридически лица, с динамично ценообразуване за всеки клиент и 15 интегрирани платежни доставчика, 8 от които изградени от нулата заради регионални изисквания.",
         "Интегрирах собствения си open-source проект Claude Agentic SDLC в кодовите бази на Abrites, както за текущата платформа, така и за нови проекти: всяка промяна получава ниво на риск, което определя проверките за review, сигурност и тестове, а защитни hooks пазят legacy поведението.",
-        "Разработвам функционалности spec-first с AI агенти (Claude Code, Codex, Junie): нищо не се merge-ва, преди да одобря плана, тестовете и diff-а, а повтарящите се корекции от review стават инструкции за агентите, skills и hooks.",
         "Изградих GitOps платформа за доставка върху Kubernetes: един общ Helm chart за всички проекти, Argo CD, който синхронизира от self-hosted GitLab с CI runners, фиксирани и тествани за съвместимост версии, и изолирани runtime среди за legacy приложенията.",
-        "Проектиране на модела на данните, валидацията и нормализацията на данни от разнородни външни източници, включително свързване на обекти между различни ERP схеми, които нямат директна връзка помежду си.",
-        "Изградих модулна дизайн система по Figma: Sass design tokens, еталонен HTML и Stimulus контролери на TypeScript, покрити с Vitest, Playwright и axe тестове за достъпност.",
         "Поддръжка на вътрешна ERP/CRM система (Python/Django + PostgreSQL), собствена CMS на базата на Symfony, система за управление на събития, REST API (Django REST Framework + Swagger), CI/CD процеси (GitLab CI) и интеграция с Dolibarr ERP."
       ]
     },
@@ -129,7 +126,7 @@
       "title": "AI & Agentic Engineering",
       "groups": [
         { "label": "Асистенти", "items": ["Anthropic Claude", "GitHub Copilot (Codex)", "JetBrains Junie"] },
-        { "label": "Agentic разработка", "items": ["Agentic SDLC процеси", "Spec-driven разработка", "Review gates по ниво на риск", "Собствени агенти, skills и hooks", "Собствени MCP команди", "E2E тестове с AI (Playwright)"] },
+        { "label": "Agentic разработка", "items": ["Анализ на проблема и дизайн на решението", "Agentic SDLC процеси", "Spec-driven разработка", "Review gates по ниво на риск", "Собствени агенти, skills и hooks", "Собствени MCP команди", "E2E тестове с AI (Playwright)"] },
         { "label": "Контекст и разходи", "items": ["Context engineering", "Маршрутизация на модели", "Бюджет за токени и разходи", "Оценка и бенчмаркове на агенти"] }
       ]
     },
@@ -169,7 +166,7 @@
         "url": "https://addons.sylius.com/en_US/products/vanssa-sylius-slider",
         "github": "https://github.com/vanssata/sylius-slider-plugin",
         "name": "Vanssa Sylius Slider",
-        "description": "Многофункционален responsive слайдер плъгин за Sylius 2, публикуван в официалния Sylius Addons магазин — слайдове с изображения и видео с превод на няколко езика, преглед на живо в админ панела, Symfony UX рендиране, Twig Hooks и опционални CMS интеграции. Тестван с PHPUnit, Behat и Playwright; CI в GitHub Actions. Изцяло написан от AI агенти през моя agentic SDLC процес: аз писах спецификациите и преглеждах всеки план и diff."
+        "description": "Многофункционален responsive слайдер плъгин за Sylius 2, публикуван в официалния Sylius Addons магазин — слайдове с изображения и видео с превод на няколко езика, преглед на живо в админ панела, Symfony UX рендиране, Twig Hooks и опционални CMS интеграции. Тестван с PHPUnit, Behat и Playwright; CI в GitHub Actions. Разработен през моя agentic SDLC процес по спецификации, написани от мен, с преглед на всеки план, тест и diff преди merge."
       },
       {
         "url": "https://breezy-bg.com",

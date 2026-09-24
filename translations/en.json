@@ -1,8 +1,8 @@
 {
   "meta": {
     "lang": "en",
-    "title": "Ivan Kakurov – Software Engineer",
-    "description": "Ivan Kakurov – Software Engineer with 13+ years of building and owning complex e-commerce platforms (Symfony, Sylius, Magento 2, Shopware 6). Runs GitOps delivery on Kubernetes and a spec-driven workflow with AI agents. Open-source plugin author. Sofia, Bulgaria."
+    "title": "Ivan Kakurov – Senior Software Engineer",
+    "description": "Ivan Kakurov – Senior Software Engineer with 13+ years of building and owning complex e-commerce platforms (Symfony, Sylius, Magento 2, Shopware 6). Runs GitOps delivery on Kubernetes and a spec-driven workflow with AI agents. Open-source plugin author. Sofia, Bulgaria."
   },
   "nav": {
     "download": "Full CV",
@@ -23,7 +23,7 @@
   },
   "personal": {
     "name": "Ivan Jordanov Kakurov",
-    "tagline": "Software Engineer · E-commerce & Production Systems · PHP/Symfony · GitOps · Agentic Engineering",
+    "tagline": "Senior Software Engineer · E-commerce & Production Systems · PHP/Symfony · GitOps · Agentic Engineering",
     "location": "Sofia, Bulgaria",
     "availability": "Open to new opportunities — remote / hybrid / on-site",
     "relocation": "Open to relocation within Bulgaria",
@@ -43,19 +43,16 @@
     {
       "period": "August 2019 – present",
       "role": "Senior PHP Developer",
-      "scope": "Platform Architecture · 5 domains",
+      "scope": "Platform Architecture · One platform, 5 domains",
       "company": "Abrites LTD",
       "companyUrl": "https://abrites.com",
       "location": "Sofia",
       "sector": "Automotive, auto services",
       "size": "90–100 employees",
       "description": [
-        "Own the architecture and delivery of the global e-commerce platform abrites.com end-to-end — 4 independent legal entities, per-client dynamic pricing, and 15 integrated payment providers, 8 of them implemented from scratch for specific regional requirements.",
+        "Own the architecture and delivery of the global e-commerce platform abrites.com end-to-end — one platform serving B2B, B2C and B2B2C across 5 independent legal entities, with per-client dynamic pricing and 15 integrated payment providers, 8 built from scratch for regional requirements.",
         "Integrated my open-source Claude Agentic SDLC pipeline into the Abrites codebases, both for the live platform and for new projects: each change gets a risk tier that sets its review, security and test gates, and guard hooks protect legacy behaviour.",
-        "Deliver features spec-first with AI agents (Claude Code, Codex, Junie): nothing merges before I approve the plan, the tests and the diff, and recurring review corrections become agent instructions, skills and hooks.",
         "Built a GitOps delivery platform on Kubernetes: one generic Helm chart for all projects, Argo CD syncing from a self-hosted GitLab with CI runners, pinned and compatibility-tested versions, and isolated runtimes for legacy applications.",
-        "Designed the data model, validation and normalization across heterogeneous external sources, resolving entity relationships between divergent ERP schemas without direct contextual links.",
-        "Built a modular design system from Figma: Sass design tokens, reference HTML and Stimulus controllers in TypeScript, covered by Vitest, Playwright and axe accessibility tests.",
         "Maintain the internal ERP/CRM (Python/Django + PostgreSQL), a custom Symfony-based CMS, an event management system, a REST API (Django REST Framework + Swagger), GitLab CI pipelines, and a Dolibarr ERP integration."
       ]
     },
@@ -129,7 +126,7 @@
       "title": "AI & Agentic Engineering",
       "groups": [
         { "label": "Assistants", "items": ["Anthropic Claude", "GitHub Copilot (Codex)", "JetBrains Junie"] },
-        { "label": "Agentic delivery", "items": ["Agentic SDLC pipelines", "Spec-driven development", "Risk-tiered review gates", "Custom agents, skills & hooks", "Custom MCP commands", "AI-driven E2E testing (Playwright)"] },
+        { "label": "Agentic delivery", "items": ["Problem analysis & solution design", "Agentic SDLC pipelines", "Spec-driven development", "Risk-tiered review gates", "Custom agents, skills & hooks", "Custom MCP commands", "AI-driven E2E testing (Playwright)"] },
         { "label": "Context & cost", "items": ["Context engineering", "Model routing", "Token & cost budgeting", "Agent evals & benchmarking"] }
       ]
     },
@@ -169,7 +166,7 @@
         "url": "https://addons.sylius.com/en_US/products/vanssa-sylius-slider",
         "github": "https://github.com/vanssata/sylius-slider-plugin",
         "name": "Vanssa Sylius Slider",
-        "description": "Feature-rich responsive slider plugin for Sylius 2, published on the official Sylius Addons store — translatable image and video slides, live admin previews, Symfony UX rendering, Twig Hooks, and optional CMS integrations. Tested with PHPUnit, Behat and Playwright; CI on GitHub Actions. Written entirely by AI agents through my agentic SDLC pipeline: I wrote the specs and reviewed every plan and diff."
+        "description": "Feature-rich responsive slider plugin for Sylius 2, published on the official Sylius Addons store — translatable image and video slides, live admin previews, Symfony UX rendering, Twig Hooks, and optional CMS integrations. Tested with PHPUnit, Behat and Playwright; CI on GitHub Actions. Developed through my agentic SDLC pipeline from human-authored specifications, with every plan, test and diff reviewed before merge."
       },
       {
         "url": "https://breezy-bg.com",

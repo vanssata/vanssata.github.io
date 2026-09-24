@@ -78,6 +78,8 @@ const ICON_MAP = {
   "Собствени MCP команди": FAV("modelcontextprotocol.io"),
   "AI-driven E2E testing (Playwright)": FAV("playwright.dev"),
   "E2E тестове с AI (Playwright)": FAV("playwright.dev"),
+  "Problem analysis & solution design": FAV("anthropic.com"),
+  "Анализ на проблема и дизайн на решението": FAV("anthropic.com"),
   "Spec-driven development": FAV("anthropic.com"),
   "Spec-driven разработка": FAV("anthropic.com"),
   "Risk-tiered review gates": FAV("anthropic.com"),
