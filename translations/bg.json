@@ -1,10 +1,12 @@
 {
   "meta": {
     "lang": "bg",
-    "title": "Иван Какъров – Software Engineer"
+    "title": "Иван Какъров – Software Engineer",
+    "description": "Иван Какъров – Software Engineer с над 13 години опит в изграждането и поддръжката на сложни e-commerce платформи (Symfony, Sylius, Magento 2, Shopware 6). GitOps доставка върху Kubernetes и spec-driven процес с AI агенти. Автор на open-source плъгини. София, България."
   },
   "nav": {
-    "download": "Изтегли CV",
+    "download": "Пълно CV",
+    "downloadShort": "CV на 2 стр.",
     "darkMode": "Тъмен режим",
     "lightMode": "Светъл режим"
   },
@@ -21,7 +23,7 @@
   },
   "personal": {
     "name": "Иван Йорданов Какъров",
-    "tagline": "Software Engineer · над 13 години PHP и e-commerce · GitOps · AI-native разработка",
+    "tagline": "Software Engineer · E-commerce и продукционни системи · PHP/Symfony · GitOps · Agentic Engineering",
     "location": "София, България",
     "availability": "Отворен за нови възможности — remote / hybrid / on-site",
     "relocation": "Възможност за релокация в рамките на България",
@@ -41,11 +43,12 @@
     {
       "period": "Август 2019 – до момента",
       "role": "Senior PHP Developer",
+      "scope": "Platform Architecture · 5 домейна",
       "company": "Abrites LTD",
       "companyUrl": "https://abrites.com",
       "location": "София",
       "sector": "Автомобилна индустрия, авто-услуги",
-      "size": "150–200 служители",
+      "size": "90–100 служители",
       "description": [
         "Отговарям за архитектурата и цялостната разработка на глобалната e-commerce платформа abrites.com — 4 независими юридически лица, динамично ценообразуване за всеки клиент и 15 интегрирани платежни доставчика, 8 от които внедрени от нулата заради специфични регионални изисквания.",
         "Интегрирах собствения си open-source проект Claude Agentic SDLC в кодовите бази на Abrites, както за текущата платформа, така и за нови проекти: всяка промяна получава ниво на риск, което определя проверките за review, сигурност и тестове, а защитни hooks пазят legacy поведението.",
@@ -107,40 +110,43 @@
     "title": "Свържете се с мен",
     "text": "Интересува ви съвместна работа? Пишете ми — с удоволствие ще обсъдя senior инженерни позиции.",
     "email": "Пишете ми",
-    "download": "Изтеглете CV"
+    "download": "Изтеглете CV (2 стр.)"
   },
+  "keySkills": ["PHP", "Symfony", "Sylius", "Magento 2", "Agentic SDLC процеси", "Spec-driven разработка", "Собствени агенти, skills и hooks", "Собствени MCP команди", "Маршрутизация на модели", "Context engineering", "Kubernetes", "Argo CD", "GitOps", "PostgreSQL", "Vue.js", "TypeScript"],
   "skills": {
     "backend": {
       "title": "Backend",
       "groups": [
-        { "label": "Езици", "items": ["PHP", "Python", "Bash", "JavaScript"] },
-        { "label": "Frameworks", "items": ["Symfony", "Laravel", "API Platform", "Doctrine", "Django", "CodeIgniter"] },
-        { "label": "CMS", "items": ["WordPress", "Joomla", "DjangoCMS"] },
-        { "label": "E-commerce", "items": ["Sylius", "Magento 2", "Shopware", "OpenCart"] },
-        { "label": "Бази данни", "items": ["PostgreSQL", "MySQL", "MariaDB", "PerconaDB", "SQLite", "Redis"] },
-        { "label": "Кеширане & Опашки", "items": ["PSR-6", "Varnish", "RabbitMQ", "AMQP"] }
-      ]
-    },
-    "frontend": {
-      "title": "Frontend",
-      "groups": [
-        { "label": "JavaScript", "items": ["TypeScript", "Vue.js", "React", "@hotwired/Stimulus", "@hotwired/Turbo", "Alpine.js", "jQuery", "KnockoutJS"] },
-        { "label": "CSS / Build", "items": ["SCSS", "Bootstrap 5", "Twig", "Design tokens", "Shopware 6 themes", "Vite", "webpack", "yarn"] }
-      ]
-    },
-    "devops": {
-      "title": "DevOps & CI/CD",
-      "groups": [
-        { "label": "Kubernetes & GitOps", "items": ["Kubernetes", "Helm", "Argo CD", "GitOps", "k3d", "Traefik"] },
-        { "label": "Контейнери", "items": ["Docker", "Docker Compose", "Docker Swarm"] },
-        { "label": "CI/CD", "items": ["GitLab CI", "Linode", "Bash scripting"] }
+        { "label": "Езици", "items": ["PHP", "Python", "Bash"] },
+        { "label": "Frameworks", "items": ["Symfony", "Laravel", "API Platform", "Doctrine", "Django"] },
+        { "label": "E-commerce", "items": ["Sylius", "Magento 2", "Shopware"] },
+        { "label": "Бази данни", "items": ["PostgreSQL", "MySQL", "Redis"] },
+        { "label": "Кеширане & Опашки", "items": ["Varnish", "RabbitMQ"] },
+        { "label": "Работил съм и с", "secondary": true, "items": ["CodeIgniter", "WordPress", "Joomla", "DjangoCMS", "OpenCart", "MariaDB", "PerconaDB", "SQLite", "PSR-6", "AMQP"] }
       ]
     },
     "ai": {
       "title": "AI & Agentic Engineering",
       "groups": [
-        { "label": "AI Асистенти", "items": ["Anthropic Claude", "GitHub Copilot (Codex)", "JetBrains Junie"] },
-        { "label": "Agentic Engineering", "items": ["Agentic SDLC процеси", "Собствени агенти, skills и hooks", "Собствени MCP команди", "E2E тестове с AI (Playwright)"] }
+        { "label": "Асистенти", "items": ["Anthropic Claude", "GitHub Copilot (Codex)", "JetBrains Junie"] },
+        { "label": "Agentic разработка", "items": ["Agentic SDLC процеси", "Spec-driven разработка", "Review gates по ниво на риск", "Собствени агенти, skills и hooks", "Собствени MCP команди", "E2E тестове с AI (Playwright)"] },
+        { "label": "Контекст и разходи", "items": ["Context engineering", "Маршрутизация на модели", "Бюджет за токени и разходи", "Оценка и бенчмаркове на агенти"] }
+      ]
+    },
+    "frontend": {
+      "title": "Frontend",
+      "groups": [
+        { "label": "JavaScript", "items": ["TypeScript", "Vue.js", "React", "Stimulus", "Turbo"] },
+        { "label": "CSS / Build", "items": ["SCSS", "Twig", "Design tokens", "Vite"] },
+        { "label": "Работил съм и с", "secondary": true, "items": ["Alpine.js", "jQuery", "KnockoutJS", "Shopware 6 themes", "Bootstrap 5", "webpack", "yarn"] }
+      ]
+    },
+    "devops": {
+      "title": "DevOps & CI/CD",
+      "groups": [
+        { "label": "Оркестрация", "items": ["Kubernetes", "Helm", "Argo CD", "GitOps", "Traefik"] },
+        { "label": "Контейнери & CI/CD", "items": ["Docker", "GitLab CI"] },
+        { "label": "Работил съм и с", "secondary": true, "items": ["Docker Compose", "Docker Swarm", "k3d", "Linode"] }
       ]
     }
   },

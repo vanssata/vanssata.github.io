@@ -1,10 +1,12 @@
 {
   "meta": {
     "lang": "en",
-    "title": "Ivan Kakurov – Software Engineer"
+    "title": "Ivan Kakurov – Software Engineer",
+    "description": "Ivan Kakurov – Software Engineer with 13+ years of building and owning complex e-commerce platforms (Symfony, Sylius, Magento 2, Shopware 6). Runs GitOps delivery on Kubernetes and a spec-driven workflow with AI agents. Open-source plugin author. Sofia, Bulgaria."
   },
   "nav": {
-    "download": "Download CV",
+    "download": "Full CV",
+    "downloadShort": "2-page CV",
     "darkMode": "Dark mode",
     "lightMode": "Light mode"
   },
@@ -21,7 +23,7 @@
   },
   "personal": {
     "name": "Ivan Jordanov Kakurov",
-    "tagline": "Software Engineer · 13+ years in PHP & e-commerce · GitOps · AI-native delivery",
+    "tagline": "Software Engineer · E-commerce & Production Systems · PHP/Symfony · GitOps · Agentic Engineering",
     "location": "Sofia, Bulgaria",
     "availability": "Open to new opportunities — remote / hybrid / on-site",
     "relocation": "Open to relocation within Bulgaria",
@@ -41,11 +43,12 @@
     {
       "period": "August 2019 – present",
       "role": "Senior PHP Developer",
+      "scope": "Platform Architecture · 5 domains",
       "company": "Abrites LTD",
       "companyUrl": "https://abrites.com",
       "location": "Sofia",
       "sector": "Automotive, auto services",
-      "size": "150–200 employees",
+      "size": "90–100 employees",
       "description": [
         "Own the architecture and delivery of the global e-commerce platform abrites.com end-to-end — 4 independent legal entities, per-client dynamic pricing, and 15 integrated payment providers, 8 of them implemented from scratch for specific regional requirements.",
         "Integrated my open-source Claude Agentic SDLC pipeline into the Abrites codebases, both for the live platform and for new projects: each change gets a risk tier that sets its review, security and test gates, and guard hooks protect legacy behaviour.",
@@ -107,40 +110,43 @@
     "title": "Let's Talk",
     "text": "Interested in working together? Reach me by email — I'm happy to discuss senior engineering roles.",
     "email": "Email me",
-    "download": "Download CV"
+    "download": "Download CV (2 pages)"
   },
+  "keySkills": ["PHP", "Symfony", "Sylius", "Magento 2", "Agentic SDLC pipelines", "Spec-driven development", "Custom agents, skills & hooks", "Custom MCP commands", "Model routing", "Context engineering", "Kubernetes", "Argo CD", "GitOps", "PostgreSQL", "Vue.js", "TypeScript"],
   "skills": {
     "backend": {
       "title": "Backend",
       "groups": [
-        { "label": "Languages", "items": ["PHP", "Python", "Bash", "JavaScript"] },
-        { "label": "Frameworks", "items": ["Symfony", "Laravel", "API Platform", "Doctrine", "Django", "CodeIgniter"] },
-        { "label": "CMS", "items": ["WordPress", "Joomla", "DjangoCMS"] },
-        { "label": "E-commerce", "items": ["Sylius", "Magento 2", "Shopware", "OpenCart"] },
-        { "label": "Database", "items": ["PostgreSQL", "MySQL", "MariaDB", "PerconaDB", "SQLite", "Redis"] },
-        { "label": "Caching & Queuing", "items": ["PSR-6", "Varnish", "RabbitMQ", "AMQP"] }
-      ]
-    },
-    "frontend": {
-      "title": "Frontend",
-      "groups": [
-        { "label": "JavaScript", "items": ["TypeScript", "Vue.js", "React", "@hotwired/Stimulus", "@hotwired/Turbo", "Alpine.js", "jQuery", "KnockoutJS"] },
-        { "label": "CSS / Build", "items": ["SCSS", "Bootstrap 5", "Twig", "Design tokens", "Shopware 6 themes", "Vite", "webpack", "yarn"] }
-      ]
-    },
-    "devops": {
-      "title": "DevOps & CI/CD",
-      "groups": [
-        { "label": "Kubernetes & GitOps", "items": ["Kubernetes", "Helm", "Argo CD", "GitOps", "k3d", "Traefik"] },
-        { "label": "Containers", "items": ["Docker", "Docker Compose", "Docker Swarm"] },
-        { "label": "CI/CD", "items": ["GitLab CI", "Linode", "Bash scripting"] }
+        { "label": "Languages", "items": ["PHP", "Python", "Bash"] },
+        { "label": "Frameworks", "items": ["Symfony", "Laravel", "API Platform", "Doctrine", "Django"] },
+        { "label": "E-commerce", "items": ["Sylius", "Magento 2", "Shopware"] },
+        { "label": "Data stores", "items": ["PostgreSQL", "MySQL", "Redis"] },
+        { "label": "Caching & Queuing", "items": ["Varnish", "RabbitMQ"] },
+        { "label": "Also worked with", "secondary": true, "items": ["CodeIgniter", "WordPress", "Joomla", "DjangoCMS", "OpenCart", "MariaDB", "PerconaDB", "SQLite", "PSR-6", "AMQP"] }
       ]
     },
     "ai": {
       "title": "AI & Agentic Engineering",
       "groups": [
-        { "label": "AI Code Assistants", "items": ["Anthropic Claude", "GitHub Copilot (Codex)", "JetBrains Junie"] },
-        { "label": "Agentic Engineering", "items": ["Agentic SDLC pipelines", "Custom agents, skills & hooks", "Custom MCP commands", "AI-driven E2E testing (Playwright)"] }
+        { "label": "Assistants", "items": ["Anthropic Claude", "GitHub Copilot (Codex)", "JetBrains Junie"] },
+        { "label": "Agentic delivery", "items": ["Agentic SDLC pipelines", "Spec-driven development", "Risk-tiered review gates", "Custom agents, skills & hooks", "Custom MCP commands", "AI-driven E2E testing (Playwright)"] },
+        { "label": "Context & cost", "items": ["Context engineering", "Model routing", "Token & cost budgeting", "Agent evals & benchmarking"] }
+      ]
+    },
+    "frontend": {
+      "title": "Frontend",
+      "groups": [
+        { "label": "JavaScript", "items": ["TypeScript", "Vue.js", "React", "Stimulus", "Turbo"] },
+        { "label": "CSS / Build", "items": ["SCSS", "Twig", "Design tokens", "Vite"] },
+        { "label": "Also worked with", "secondary": true, "items": ["Alpine.js", "jQuery", "KnockoutJS", "Shopware 6 themes", "Bootstrap 5", "webpack", "yarn"] }
+      ]
+    },
+    "devops": {
+      "title": "DevOps & CI/CD",
+      "groups": [
+        { "label": "Orchestration", "items": ["Kubernetes", "Helm", "Argo CD", "GitOps", "Traefik"] },
+        { "label": "Containers & CI/CD", "items": ["Docker", "GitLab CI"] },
+        { "label": "Also worked with", "secondary": true, "items": ["Docker Compose", "Docker Swarm", "k3d", "Linode"] }
       ]
     }
   },
