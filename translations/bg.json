@@ -64,6 +64,7 @@
       "location": "София",
       "sector": "Интернет / E-commerce",
       "size": "10–20 служители",
+      "short": 1,
       "description": [
         "Работа по мащабни и сложни e-commerce проекти с Magento (Adobe Commerce) в тясно партньорство с холандската компания Diract.",
         "Персонализация на основната функционалност, разработка на B2B модули и процеси, редизайн на checkout процеса и фактурирането.",
@@ -77,6 +78,7 @@
       "location": "София",
       "sector": "Интернет / E-commerce",
       "size": "20–50 служители",
+      "short": 0,
       "description": [
         "Разработка и поддръжка на разнородни проекти — от малки landing сайтове до сложни системи за банки и застрахователни компании.",
         "Изграждане на персонализирани e-commerce решения от нулата."
@@ -89,6 +91,7 @@
       "location": "Пловдив",
       "sector": "Интернет / E-commerce",
       "size": "10–20 служители",
+      "short": 0,
       "description": [
         "Разработка на малки и средни сайтове и API-та."
       ]
@@ -177,6 +180,7 @@
         "url": "https://vanssata.github.io/",
         "github": "https://github.com/vanssata/vanssata.github.io",
         "name": "vanssata.github.io — тази автобиография",
+        "short": false,
         "description": "Single-page CV на Vue 3 + Bootstrap 5 с runtime i18n (EN/BG), тъмна тема и оптимизиран за печат PDF експорт. Започнат изцяло на ръка писан чист код, впоследствие мигриран към AI-подпомогнат работен процес — Claude Code със специфични за проекта skills, hooks и MCP tooling."
       }
     ]

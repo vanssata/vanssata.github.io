@@ -196,6 +196,13 @@ a.sidebar-info-item:hover {
   #cta {
     order: 7;
   }
+  /* A variant written for a backend role leads with the roles instead. */
+  .cv-main.experience-first #experience {
+    order: 2;
+  }
+  .cv-main.experience-first #personal-projects {
+    order: 3;
+  }
 }
 
 /* ── Main content ───────────────────────────────────────── */
@@ -364,8 +371,15 @@ a.sidebar-info-item:hover {
 }
 
 /* ── Print / PDF ────────────────────────────────────────── */
-.print-only {
+.print-only,
+.cut-only {
   display: none;
+}
+
+/* One-liner that stands in for a project's description in the 2-page cut. */
+.project-brief {
+  font-weight: 400;
+  color: var(--bs-secondary-color);
 }
 
 /* Top/bottom margins live on @page so they repeat on every sheet;
@@ -527,10 +541,17 @@ a.sidebar-info-item:hover {
     padding-top: 3mm !important;
   }
 
-  /* The CV's own entry is about this page; a recruiter reading the PDF
-     is already holding it. */
-  :root[data-cv="short"] #personal-projects dt:nth-of-type(n + 5) {
+  /* What the cut drops is marked in the data, not by position, so a variant
+     can reorder roles and projects without re-deriving these rules:
+     "short": n on a role keeps its first n bullets (0 = header only),
+     "short": false on a project or a skill category drops it (e.g. the
+     CV's own entry — a recruiter reading the PDF is already holding it). */
+  :root[data-cv="short"] .cut-drop {
     display: none !important;
+  }
+
+  :root[data-cv="short"] .cut-only {
+    display: inline !important;
   }
 
   /* One step down the scale across the whole cut — cheaper than deciding
@@ -542,30 +563,28 @@ a.sidebar-info-item:hover {
     --cv-fs-xs: 0.75rem;
   }
 
-  /* The current role keeps all four bullets; the second keeps one, and the
-     two oldest keep only the fact that they happened — 2013–2018 is arc,
-     not evidence. */
-  :root[data-cv="short"] .experience-item:nth-of-type(2) li:nth-child(n + 2) {
-    display: none !important;
-  }
-
   /* Without the project descriptions this line has nothing to introduce. */
   :root[data-cv="short"] #personal-projects > p {
     display: none !important;
   }
 
-  :root[data-cv="short"] .experience-item:nth-of-type(n + 3) ul {
+  /* The base CV's data: the current role keeps all four bullets, the second
+     keeps one, and the two oldest keep only the fact that they happened —
+     2013–2018 is arc, not evidence. */
+  :root[data-cv="short"] .experience-item.cut-header-only ul {
     display: none !important;
   }
 
-  :root[data-cv="short"] .experience-item:nth-of-type(n + 3) {
+  /* Two classes on purpose: it has to outrank the 0.9rem gap every role
+     gets further down. */
+  :root[data-cv="short"] .experience-item.cut-header-only {
     margin-bottom: 0.5rem !important;
   }
 
   /* With the list hidden, the global "keep the header with its bullets"
      rule has no bullets to hold on to and chains these blocks into the
      section below, pushing the lot onto the next sheet. */
-  :root[data-cv="short"] .experience-item:nth-of-type(n + 3) > * {
+  :root[data-cv="short"] .experience-item.cut-header-only > * {
     break-after: auto;
   }
 

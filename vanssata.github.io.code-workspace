@@ -82,7 +82,7 @@
       {
         "label": "Check translations in lockstep",
         "type": "shell",
-        "command": "diff <(jq -r '[paths|map(tostring)|join(\".\")]|sort|.[]' translations/en.json) <(jq -r '[paths|map(tostring)|join(\".\")]|sort|.[]' translations/bg.json) && echo OK",
+        "command": "keys() { jq -r '[paths|map(tostring)|join(\".\")]|sort|.[]' \"$1\"; }; for d in translations translations/variants/*/; do [ -f \"$d/en.json\" ] || continue; diff <(keys \"$d/en.json\") <(keys \"$d/bg.json\") || { echo \"$d: en/bg differ\"; exit 1; }; done && echo OK",
         "problemMatcher": [],
         "presentation": {
           "reveal": "always",

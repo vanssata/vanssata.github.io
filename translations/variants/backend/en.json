@@ -1,0 +1,214 @@
+{
+  "meta": {
+    "title": "Ivan Kakurov – Senior Backend Engineer",
+    "description": "Ivan Kakurov – Senior Backend Engineer with 13+ years of PHP: architecture of production-critical, multi-entity commerce platforms (Symfony, Sylius, Magento 2), API and payment integrations, ERP/CRM synchronization and GitOps delivery on Kubernetes. Sofia, Bulgaria."
+  },
+  "layout": {
+    "experienceFirst": true
+  },
+  "personal": {
+    "tagline": "Senior Backend Engineer · PHP/Symfony · APIs & Integrations · Payments · GitOps on Kubernetes"
+  },
+  "summary": "Senior backend engineer with 13+ years of PHP and end-to-end ownership of production-critical platforms, from business requirements and technical design to APIs, data models, integrations and support. Architect of a Symfony/Sylius platform serving 5 independent legal entities (B2B, B2C, B2B2C) with per-client pricing, 15 payment-provider integrations (8 built from scratch) and ERP/CRM synchronization, delivered through GitOps on Kubernetes. Sets the review, security and test gates every change passes, AI-assisted work included. Earlier built systems for banks and insurers.",
+  "educationNote": "Self-taught engineer — 13+ years of hands-on learning in production systems and published open-source work.",
+  "experience": [
+    {
+      "period": "August 2019 – present",
+      "role": "Senior PHP Developer",
+      "scope": "Platform Architecture · One platform, 5 domains",
+      "company": "Abrites LTD",
+      "companyUrl": "https://abrites.com",
+      "location": "Sofia",
+      "sector": "Automotive, auto services",
+      "size": "90–100 employees",
+      "description": [
+        "Own the architecture of abrites.com end-to-end — one platform for 5 independent legal entities (B2B, B2C, B2B2C) with per-client dynamic pricing — from requirements and technical design to deployment and support.",
+        "Integrated 15 payment providers — 8 of them built from scratch for regional requirements — alongside ERP/CRM synchronization and a Dolibarr ERP integration.",
+        "Maintain the internal ERP/CRM (Python/Django + PostgreSQL), a REST API (Django REST Framework + Swagger), a custom Symfony-based CMS and an event management system.",
+        "Set up risk-tiered quality gates for the live platform and new projects: each change's tier decides its review, security and test gates, and guard hooks protect legacy behaviour — built on my open-source Claude Agentic SDLC.",
+        "Built a GitOps delivery platform on Kubernetes: one generic Helm chart for all projects, Argo CD syncing from a self-hosted GitLab with CI runners, pinned and compatibility-tested versions, and isolated runtimes for legacy applications."
+      ]
+    },
+    {
+      "period": "August 2018 – August 2019",
+      "role": "PHP Developer",
+      "company": "Beluga",
+      "companyUrl": "https://beluga.software/",
+      "location": "Sofia",
+      "sector": "Internet / E-commerce",
+      "size": "10–20 employees",
+      "description": [
+        "Delivered large-scale Magento (Adobe Commerce) projects in partnership with the Dutch agency Diract: customized core functionality, built custom B2B modules and processes, and redesigned the checkout and invoicing pipeline.",
+        "Built the Docker-based CI/CD production flow: containerized environments, automated build and test pipelines, and deployments to Linode servers."
+      ]
+    },
+    {
+      "period": "September 2015 – August 2018",
+      "role": "PHP Developer",
+      "company": "Studiox",
+      "location": "Sofia",
+      "sector": "Internet / E-commerce",
+      "size": "20–50 employees",
+      "short": 1,
+      "description": [
+        "Developed and maintained complex systems for banks and insurance companies, alongside projects of every scale.",
+        "Built custom e-commerce solutions from scratch."
+      ]
+    },
+    {
+      "period": "April 2013 – August 2015",
+      "role": "PHP Developer",
+      "company": "3web.bg",
+      "location": "Plovdiv",
+      "sector": "Internet / E-commerce",
+      "size": "10–20 employees",
+      "short": 0,
+      "description": [
+        "Worked on a variety of small to mid-scale websites and APIs."
+      ]
+    }
+  ],
+  "keySkills": ["PHP", "Symfony", "Laravel", "REST APIs", "Payment providers", "ERP/CRM integration", "PostgreSQL", "MySQL", "MariaDB", "Doctrine", "RabbitMQ", "PHPUnit", "Docker", "Kubernetes", "GitLab CI", "Spec-driven development"],
+  "skills": {
+    "backend": {
+      "title": "Backend",
+      "groups": [
+        { "label": "Languages", "items": ["PHP", "Python", "Bash"] },
+        { "label": "Frameworks", "items": ["Symfony", "Laravel", "API Platform", "Doctrine", "Django"] },
+        { "label": "APIs & integration", "items": ["REST APIs", "OpenAPI / Swagger", "SOAP", "Payment providers", "ERP/CRM integration"] },
+        { "label": "Data stores", "items": ["PostgreSQL", "MySQL", "MariaDB", "Redis"] },
+        { "label": "Caching & Queuing", "items": ["Varnish", "RabbitMQ"] },
+        { "label": "E-commerce & CMS", "items": ["Sylius", "Magento 2", "Shopware", "Joomla", "WordPress"] },
+        { "label": "Also worked with", "secondary": true, "items": ["CodeIgniter", "DjangoCMS", "OpenCart", "PerconaDB", "SQLite", "PSR-6", "AMQP"] }
+      ]
+    },
+    "devops": {
+      "title": "Testing, CI/CD & DevOps",
+      "groups": [
+        { "label": "Testing", "items": ["PHPUnit", "Behat", "Playwright"] },
+        { "label": "CI/CD", "items": ["GitLab CI", "GitHub Actions", "Argo CD", "GitOps"] },
+        { "label": "Containers & orchestration", "items": ["Docker", "Kubernetes", "Helm", "Traefik"] },
+        { "label": "Also worked with", "secondary": true, "items": ["Docker Compose", "Docker Swarm", "k3d", "Linode"] }
+      ]
+    },
+    "ai": {
+      "title": "AI & Agentic Engineering",
+      "groups": [
+        { "label": "Assistants", "items": ["Anthropic Claude", "GitHub Copilot (Codex)", "JetBrains Junie"] },
+        { "label": "Agentic delivery", "items": ["Problem analysis & solution design", "Spec-driven development", "Agentic SDLC pipelines", "Risk-tiered review gates", "Custom agents, skills & hooks", "Custom MCP commands"] },
+        { "label": "Context & cost", "secondary": true, "items": ["Context engineering", "Model routing", "Token & cost budgeting", "Agent evals & benchmarking"] }
+      ]
+    },
+    "frontend": {
+      "title": "Frontend",
+      "short": false,
+      "groups": [
+        { "label": "JavaScript", "items": ["TypeScript", "Vue.js", "React", "Stimulus", "Turbo"] },
+        { "label": "CSS / Build", "secondary": true, "items": ["SCSS", "Twig", "Design tokens", "Vite"] },
+        { "label": "Also worked with", "secondary": true, "items": ["Alpine.js", "jQuery", "KnockoutJS", "Shopware 6 themes", "Bootstrap 5", "webpack", "yarn"] }
+      ]
+    }
+  },
+  "personalProjects": {
+    "items": [
+      {
+        "url": "https://addons.sylius.com/en_US/products/vanssa-sylius-slider",
+        "github": "https://github.com/vanssata/sylius-slider-plugin",
+        "name": "Vanssa Sylius Slider",
+        "brief": "published Sylius 2 plugin; PHPUnit, Behat and Playwright tests, GitHub Actions CI.",
+        "description": "Feature-rich responsive slider plugin for Sylius 2, published on the official Sylius Addons store — translatable image and video slides, live admin previews, Symfony UX rendering, Twig Hooks, and optional CMS integrations. Tested with PHPUnit, Behat and Playwright; CI on GitHub Actions. Developed through my agentic SDLC pipeline from human-authored specifications, with every plan, test and diff reviewed before merge."
+      },
+      {
+        "url": "https://vanssata.github.io/claude-agentic-sdlc-module/",
+        "github": "https://github.com/vanssata/claude-agentic-sdlc-module",
+        "name": "Claude Agentic SDLC",
+        "brief": "open-source pipeline gating AI-agent changes by risk tier: review, security and test gates.",
+        "description": "Agentic delivery pipeline for Claude Code and Codex, built for legacy production codebases. Each change gets a risk tier (T0–T5) that sets its gates — planning, review, security and test agents, plus guard hooks against out-of-scope edits and pushes to protected branches — and ends at human approval. Tier-based model routing cut the cost of contained (T2) changes by 32%, and cost per request by 8.3% across 7,054 requests."
+      },
+      {
+        "url": "https://breezy-bg.com",
+        "name": "breezy-bg.com",
+        "brief": "Shopware 6.5 store; custom cart and checkout modules built for Bulgarian e-commerce law.",
+        "description": "Shopware 6.5 e-commerce platform with custom modules replacing the core cart and checkout concept, optimized for Bulgarian e-commerce law compliance. Runs on a custom storefront theme: Twig templates, SCSS, JavaScript storefront plugins and a theme configuration for the admin."
+      },
+      {
+        "url": "https://plugins.jetbrains.com/plugin/33150-claude-subscription-acp-agent",
+        "github": "https://github.com/vanssata/jetbrains-claude-subscription",
+        "name": "Claude Subscription ACP Agent — JetBrains plugin",
+        "short": false,
+        "description": "JetBrains Marketplace plugin that adds a Claude Subscription (Pro/Max) ACP agent to the AI Assistant chat agent picker — use a Claude subscription directly inside JetBrains IDEs."
+      },
+      {
+        "url": "https://vanssata.github.io/",
+        "github": "https://github.com/vanssata/vanssata.github.io",
+        "name": "vanssata.github.io — this CV",
+        "short": false,
+        "description": "Vue 3 + Bootstrap 5 single-page CV with runtime i18n (EN/BG), dark mode, and print-optimized PDF export. Started as hand-written clean code and later migrated to an AI-assisted workflow — Claude Code with project-specific skills, hooks, and MCP tooling."
+      }
+    ]
+  },
+  "projects": [
+    {
+      "url": "https://b2b.solvex.bg",
+      "name": "b2b.solvex.bg",
+      "brief": "hotel booking for 1,200+ hotels, ~50 GB/day of real-time SOAP data",
+      "description": "B2B/B2C hotel booking and management platform with 1,200+ hotels and ~50 GB/day of real-time data processed from SOAP services."
+    },
+    {
+      "url": "https://bigmarket.bg/",
+      "name": "bigmarket.bg",
+      "brief": "Magento 2 B2B wholesale, real-time stock from 10+ warehouses",
+      "description": "B2B wholesale platform for stationery and office supplies built on Magento 2, serving distributors with real-time inventory from 10+ warehouses."
+    },
+    {
+      "url": "https://joya.bg/",
+      "name": "officemarket.bg / joya.bg",
+      "description": "Retail e-commerce for office and stationery products (sister site to BigMarket) built on Magento 2 with a heavily customized B2B/B2C business model."
+    },
+    {
+      "url": "https://hermesbooks.bg/",
+      "name": "hermesbooks.bg",
+      "description": "Online bookstore for Hermes — Bulgaria's largest bookstore chain with 12 nationwide locations — built on Magento 2 with books, stationery, and cultural events."
+    },
+    {
+      "url": "https://abrites.com",
+      "name": "abrites.com",
+      "description": "Global automotive diagnostics e-commerce platform — see Abrites LTD in Work Experience for full detail."
+    },
+    {
+      "url": "https://www.bittel.bg",
+      "name": "bittel.bg",
+      "description": "E-commerce and product catalog for Bittel Ltd — official Bulgarian distributor of Daikin, Toshiba, Panasonic, Alcatel and others in air conditioning, solar tech, telecoms, and IT."
+    },
+    {
+      "url": "https://www.nippon.bg",
+      "name": "nippon.bg",
+      "description": "E-commerce site for the Nippon brand (solar collectors, air conditioners, intercom systems) — a Bulgarian brand owned and distributed by Bittel Ltd across Europe."
+    },
+    {
+      "url": "https://thelearningedge.net",
+      "name": "thelearningedge.net",
+      "description": "Corporate presentation site built as a showcase for a custom Symfony 2 in-house framework."
+    },
+    {
+      "url": "https://ndk.bg/",
+      "name": "ndk.bg",
+      "description": "Website for NDK (National Palace of Culture) — the largest multifunctional congress and exhibition center in Southeast Europe, located in Sofia."
+    },
+    {
+      "url": "https://indeavr.com",
+      "name": "indeavr.com",
+      "description": "Corporate site for INDEAVR — a Bulgarian technology services company specializing in digital transformation, data science, cloud, and AI solutions."
+    },
+    {
+      "url": "https://arteks.net",
+      "name": "arteks.net",
+      "description": "Corporate site for Arteks Engineering — a Bulgarian architectural-construction company focused on luxury real estate development."
+    },
+    {
+      "url": "https://coloreffect.bg",
+      "name": "coloreffect.bg",
+      "description": "Interior design company specializing in luxury solar shading systems for windows and facades."
+    }
+  ]
+}
