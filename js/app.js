@@ -7,6 +7,7 @@ const ICON_MAP = {
   // Backend languages
   PHP: "devicon-php-plain colored",
   Python: "devicon-python-plain colored",
+  "Node.js": "devicon-nodejs-plain colored",
   Bash: "devicon-bash-plain colored",
   // Backend frameworks
   Symfony: "devicon-symfony-original colored",

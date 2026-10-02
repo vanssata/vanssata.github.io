@@ -36,3 +36,8 @@ Variants are marked `noindex`; the base CV is the page search engines know.
 
 - `backend` — senior backend / platform roles: PHP & Symfony, APIs and
   integrations, payments, data stores, testing and CI/CD first.
+- `saas` — software engineer at a SaaS / product company, AI-era: the
+  AI-augmented workflow (agentic SDLC, review gates, evals, model routing)
+  leads, then end-to-end ownership across PHP and Python, APIs, caching and
+  messaging, testing, CI/CD and GitOps delivery; frontend stays in the cut.
+  Keeps the base on-screen order (personal projects first).
