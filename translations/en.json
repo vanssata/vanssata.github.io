@@ -64,6 +64,7 @@
       "location": "Sofia",
       "sector": "Internet / E-commerce",
       "size": "10–20 employees",
+      "short": 1,
       "description": [
         "Delivered large-scale Magento (Adobe Commerce) e-commerce projects in close partnership with the Dutch agency Diract.",
         "Customized core functionality, built custom B2B modules and processes, and redesigned the checkout and invoicing pipeline.",
@@ -77,6 +78,7 @@
       "location": "Sofia",
       "sector": "Internet / E-commerce",
       "size": "20–50 employees",
+      "short": 0,
       "description": [
         "Developed and maintained projects across the full range of scale — from landing pages for local businesses to complex systems for banks and insurance companies.",
         "Built custom e-commerce solutions from scratch."
@@ -89,6 +91,7 @@
       "location": "Plovdiv",
       "sector": "Internet / E-commerce",
       "size": "10–20 employees",
+      "short": 0,
       "description": [
         "Worked on a variety of small to mid-scale websites and APIs."
       ]
@@ -177,6 +180,7 @@
         "url": "https://vanssata.github.io/",
         "github": "https://github.com/vanssata/vanssata.github.io",
         "name": "vanssata.github.io — this CV",
+        "short": false,
         "description": "Vue 3 + Bootstrap 5 single-page CV with runtime i18n (EN/BG), dark mode, and print-optimized PDF export. Started as hand-written clean code and later migrated to an AI-assisted workflow — Claude Code with project-specific skills, hooks, and MCP tooling."
       }
     ]

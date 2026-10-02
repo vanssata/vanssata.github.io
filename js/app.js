@@ -7,6 +7,7 @@ const ICON_MAP = {
   // Backend languages
   PHP: "devicon-php-plain colored",
   Python: "devicon-python-plain colored",
+  "Node.js": "devicon-nodejs-plain colored",
   Bash: "devicon-bash-plain colored",
   // Backend frameworks
   Symfony: "devicon-symfony-original colored",
@@ -16,7 +17,7 @@ const ICON_MAP = {
   Doctrine: FAV("doctrine-project.org"),
   Django: "devicon-django-plain colored",
   // CMS
-  Joomla: "devicon-joomla-plain colored",
+  Joomla: FAV("joomla.org"), // devicon 2.16 has no Joomla glyph
   WordPress: "devicon-wordpress-plain colored",
   DjangoCMS: FAV("django-cms.org"),
   // E-commerce
@@ -24,10 +25,18 @@ const ICON_MAP = {
   "Magento 2": "devicon-magento-original colored",
   Shopware: "devicon-shopware-original colored",
   OpenCart: FAV("opencart.com"),
+  // APIs & integration
+  "REST APIs": "fa-solid fa-plug",
+  "OpenAPI / Swagger": "devicon-swagger-plain colored",
+  SOAP: "fa-solid fa-code",
+  "Payment providers": "fa-solid fa-credit-card",
+  Плащания: "fa-solid fa-credit-card",
+  "ERP/CRM integration": "fa-solid fa-arrows-rotate",
+  "ERP/CRM": "fa-solid fa-arrows-rotate",
   // Databases
   PostgreSQL: "devicon-postgresql-plain colored",
   MySQL: "devicon-mysql-plain colored",
-  MariaDB: "devicon-mysql-plain colored",
+  MariaDB: "devicon-mariadb-original colored",
   PerconaDB: FAV("percona.com"),
   SQLite: "devicon-sqlite-plain colored",
   Redis: "devicon-redis-plain colored",
@@ -36,7 +45,12 @@ const ICON_MAP = {
   Varnish: FAV("varnish-software.com"),
   RabbitMQ: "devicon-rabbitmq-original colored",
   AMQP: "devicon-rabbitmq-original colored",
+  // Testing
+  PHPUnit: FAV("phpunit.de"),
+  Behat: FAV("behat.org"),
+  Playwright: "devicon-playwright-plain colored",
   // DevOps
+  "GitHub Actions": "devicon-githubactions-plain colored",
   Docker: "devicon-docker-plain colored",
   "Docker Compose": "devicon-docker-plain colored",
   "Docker Swarm": "devicon-docker-plain colored",
@@ -80,6 +94,7 @@ const ICON_MAP = {
   "E2E тестове с AI (Playwright)": FAV("playwright.dev"),
   "Problem analysis & solution design": FAV("anthropic.com"),
   "Анализ на проблема и дизайн на решението": FAV("anthropic.com"),
+  "Анализ и дизайн на решения": FAV("anthropic.com"),
   "Spec-driven development": FAV("anthropic.com"),
   "Spec-driven разработка": FAV("anthropic.com"),
   "Risk-tiered review gates": FAV("anthropic.com"),
@@ -92,6 +107,58 @@ const ICON_MAP = {
   "Agent evals & benchmarking": FAV("playwright.dev"),
   "Оценка и бенчмаркове на агенти": FAV("playwright.dev"),
 };
+
+// ?cv=<name> lays translations/variants/<name>/<lang>.json over the base CV.
+// A variant holds only what it changes: objects merge key by key and the
+// variant's key order wins (that is how it reorders skill categories),
+// arrays and strings replace the base value whole, and null drops a key.
+const VARIANT = (() => {
+  const v = new URLSearchParams(location.search).get("cv");
+  return v && /^[a-z0-9-]+$/.test(v) ? v : null;
+})();
+
+const isObject = (v) =>
+  v !== null && typeof v === "object" && !Array.isArray(v);
+
+function overlay(base, over) {
+  if (!isObject(base) || !isObject(over)) return over;
+  const out = {};
+  for (const [k, v] of Object.entries(over)) {
+    if (v !== null) out[k] = k in base ? overlay(base[k], v) : v;
+  }
+  for (const [k, v] of Object.entries(base)) {
+    if (!(k in over)) out[k] = v;
+  }
+  return out;
+}
+
+async function loadJSON(url) {
+  const r = await fetch(url);
+  if (!r.ok) throw new Error(`${url}: ${r.status}`);
+  return r.json();
+}
+
+async function loadLanguage(lang) {
+  const base = await loadJSON(`translations/${lang}.json`);
+  if (!VARIANT) return base;
+  try {
+    return overlay(
+      base,
+      await loadJSON(`translations/variants/${VARIANT}/${lang}.json`),
+    );
+  } catch {
+    return base; // unknown variant: show the plain CV, not a blank page
+  }
+}
+
+// A variant is cut for one kind of role and sent by link; the base CV is the
+// page search engines should know.
+if (VARIANT) {
+  const robots = document.createElement("meta");
+  robots.name = "robots";
+  robots.content = "noindex";
+  document.head.append(robots);
+}
 
 createApp({
   setup() {
@@ -119,8 +186,8 @@ createApp({
     onMounted(async () => {
       try {
         const [en, bg] = await Promise.all([
-          fetch("translations/en.json").then((r) => r.json()),
-          fetch("translations/bg.json").then((r) => r.json()),
+          loadLanguage("en"),
+          loadLanguage("bg"),
         ]);
         translations.value = { en, bg };
       } finally {
@@ -165,6 +232,9 @@ createApp({
     // follows the root element's colour scheme, not the print stylesheet.
     // "short" is the two-page recruiter cut; everything it drops is still in
     // the DOM, hidden by the print stylesheet, so there is one source of truth.
+    // What the cut keeps is data: "short" on a role (bullets kept), on a
+    // project or a skill category (false = dropped), and "brief" for the
+    // one-liner a project prints instead of its description.
     function downloadPDF(variant) {
       const root = document.documentElement;
       const was = root.getAttribute("data-bs-theme");

@@ -1,0 +1,213 @@
+{
+  "meta": {
+    "title": "Иван Какъров – Senior Software Engineer",
+    "description": "Иван Какъров – Senior Software Engineer с над 13 години цялостна отговорност за продукционни платформи (PHP/Symfony, Python/Django): spec-first разработка с AI агенти през agentic SDLC с проверки по ниво на риск, API и интеграции, GitOps доставка върху Kubernetes. София, България."
+  },
+  "personal": {
+    "tagline": "Senior Software Engineer · AI-подпомогната разработка · PHP/Symfony · Python/Django · GitOps върху Kubernetes"
+  },
+  "languages": [
+    { "name": "Български", "level": "Роден" },
+    { "name": "Английски", "level": "Професионално работно ниво (писмена и техническа комуникация)" }
+  ],
+  "summary": "Софтуерен инженер с над 13 години цялостна отговорност за продукционни платформи — от първия бизнес въпрос през архитектурата, API и моделите на данни до доставката и производителността в продукция. Работи с AI всеки ден: разработва spec-first с Claude Code и Codex агенти през собствения си open-source Agentic SDLC — нивото на риск определя проверките за review, сигурност и тестове, а човек чете всеки план, тест и diff преди merge; маршрутизацията по ниво на риск свали разхода за ограничени промени с 32%. Архитект на глобална търговска платформа (5 юридически лица, 15 платежни интеграции, ERP/CRM) и на GitOps доставката ѝ върху Kubernetes. Автор на open-source плъгини (JetBrains, Sylius).",
+  "educationNote": "Самоук инженер — над 13 години практика в продукционни системи и публикувани open-source проекти.",
+  "experience": [
+    {
+      "period": "Август 2019 – до момента",
+      "role": "Senior PHP Developer",
+      "scope": "Platform Architecture · Една платформа, 5 домейна",
+      "company": "Abrites LTD",
+      "companyUrl": "https://abrites.com",
+      "location": "София",
+      "sector": "Автомобилна индустрия, авто-услуги",
+      "size": "90–100 служители",
+      "description": [
+        "Отговарям за abrites.com от край до край — глобална търговска платформа за 5 юридически лица (B2B, B2C, B2B2C) с динамични цени за всеки клиент — от първия бизнес въпрос до поддръжката в продукция.",
+        "Въведох AI-подпомогнат работен процес в кодовите бази на Abrites чрез моя open-source Claude Agentic SDLC: нивото на риск определя проверките за review, сигурност и тестове, защитни hooks пазят legacy поведението, а човек чете всеки генериран от AI план, тест и diff преди продукция.",
+        "Интегрирах 15 платежни доставчика (8 от нулата заради регионални изисквания), ERP/CRM синхронизация и Dolibarr ERP. Работя с PHP и Python в една продукционна среда: търговската платформа, Symfony CMS, система за събития и вътрешната ERP/CRM (Python/Django + PostgreSQL, REST API).",
+        "Изградих GitOps платформата за доставка върху Kubernetes, през която минава всичко: общ Helm chart, Argo CD от self-hosted GitLab CI, фиксирани и тествани за съвместимост версии, изолирани legacy среди."
+      ]
+    },
+    {
+      "period": "Август 2018 – Август 2019",
+      "role": "PHP Developer",
+      "company": "Beluga",
+      "companyUrl": "https://beluga.software/",
+      "location": "София",
+      "sector": "Интернет / E-commerce",
+      "size": "10–20 служители",
+      "description": [
+        "Мащабни Magento (Adobe Commerce) проекти с холандската агенция Diract: персонализация на ядрото, B2B модули и процеси, редизайн на checkout и фактурирането.",
+        "Изградих CI/CD процеса с Docker: контейнеризирани среди, build и тест pipeline-и, deployment към Linode."
+      ]
+    },
+    {
+      "period": "Септември 2015 – Август 2018",
+      "role": "PHP Developer",
+      "company": "Studiox",
+      "location": "София",
+      "sector": "Интернет / E-commerce",
+      "size": "20–50 служители",
+      "short": 0,
+      "description": [
+        "Разработка и поддръжка на проекти от всякакъв мащаб — от landing сайтове до сложни системи за банки и застрахователи.",
+        "Изграждане на персонализирани e-commerce решения от нулата."
+      ]
+    },
+    {
+      "period": "Юли 2013 – Септември 2015",
+      "role": "PHP Developer",
+      "company": "3web.bg",
+      "location": "Пловдив",
+      "sector": "Интернет / E-commerce",
+      "size": "10–20 служители",
+      "short": 0,
+      "description": [
+        "Разработка на малки и средни сайтове и API-та."
+      ]
+    }
+  ],
+  "keySkills": ["PHP", "Python", "TypeScript", "Symfony", "Django", "REST APIs", "PostgreSQL", "Redis", "RabbitMQ", "Agentic SDLC процеси", "Spec-driven разработка", "Собствени агенти, skills и hooks", "Собствени MCP команди", "Маршрутизация на модели", "Kubernetes", "GitOps"],
+  "skills": {
+    "ai": {
+      "title": "AI & Agentic Engineering",
+      "groups": [
+        { "label": "Асистенти", "items": ["Anthropic Claude", "GitHub Copilot (Codex)", "JetBrains Junie"] },
+        { "label": "Agentic разработка", "items": ["Анализ и дизайн на решения", "Spec-driven разработка", "Agentic SDLC процеси", "Review gates по ниво на риск", "Собствени агенти, skills и hooks", "Собствени MCP команди"] },
+        { "label": "Оценка и разходи", "items": ["Оценка и бенчмаркове на агенти", "Маршрутизация на модели", "Бюджет за токени и разходи", "Context engineering"] }
+      ]
+    },
+    "backend": {
+      "title": "Backend",
+      "groups": [
+        { "label": "Езици", "items": ["PHP", "Python", "TypeScript", "Bash"] },
+        { "label": "Frameworks", "items": ["Symfony", "Django", "API Platform", "Doctrine", "Laravel"] },
+        { "label": "API и интеграции", "items": ["REST APIs", "OpenAPI / Swagger", "SOAP", "Плащания", "ERP/CRM"] },
+        { "label": "Данни, кеширане и опашки", "items": ["PostgreSQL", "MySQL", "MariaDB", "Redis", "Varnish", "RabbitMQ"] },
+        { "label": "E-commerce & CMS", "items": ["Sylius", "Magento 2", "Shopware", "WordPress", "Joomla"] },
+        { "label": "Работил съм и с", "secondary": true, "items": ["Node.js", "CodeIgniter", "DjangoCMS", "OpenCart", "PerconaDB", "SQLite", "PSR-6", "AMQP"] }
+      ]
+    },
+    "devops": {
+      "title": "Тестове, CI/CD и доставка",
+      "groups": [
+        { "label": "Тестове", "items": ["PHPUnit", "Behat", "Playwright"] },
+        { "label": "CI/CD", "items": ["GitLab CI", "GitHub Actions", "Argo CD", "GitOps"] },
+        { "label": "Контейнери & оркестрация", "items": ["Docker", "Kubernetes", "Helm", "Traefik"] },
+        { "label": "Работил съм и с", "secondary": true, "items": ["Docker Compose", "Docker Swarm", "k3d", "Linode"] }
+      ]
+    },
+    "frontend": {
+      "title": "Frontend",
+      "short": false,
+      "groups": [
+        { "label": "JavaScript", "items": ["TypeScript", "Vue.js", "React", "Stimulus", "Turbo"] },
+        { "label": "CSS / Build", "secondary": true, "items": ["SCSS", "Twig", "Design tokens", "Vite"] },
+        { "label": "Работил съм и с", "secondary": true, "items": ["Alpine.js", "jQuery", "KnockoutJS", "Shopware 6 themes", "Bootstrap 5", "webpack", "yarn"] }
+      ]
+    }
+  },
+  "personalProjects": {
+    "items": [
+      {
+        "url": "https://vanssata.github.io/claude-agentic-sdlc-module/",
+        "github": "https://github.com/vanssata/claude-agentic-sdlc-module",
+        "name": "Claude Agentic SDLC",
+        "brief": "open-source agentic процес: review, security и test gates по ниво на риск, човешко одобрение.",
+        "description": "Agentic процес за доставка на софтуер за Claude Code и Codex, създаден за legacy продукционни кодови бази. Всяка промяна получава ниво на риск (T0–T5), което определя проверките ѝ — агенти за планиране, review, сигурност и тестове, плюс защитни hooks срещу промени извън обхвата и push към защитени клонове — и завършва с човешко одобрение. Маршрутизацията на моделите по ниво на риск свали разхода за ограничени (T2) промени с 32%, а разхода на заявка — с 8.3% за 7054 заявки. Има собствен тестов пакет и CI в GitHub Actions."
+      },
+      {
+        "url": "https://plugins.jetbrains.com/plugin/33150-claude-subscription-acp-agent",
+        "github": "https://github.com/vanssata/jetbrains-claude-subscription",
+        "name": "Claude Subscription ACP Agent — JetBrains плъгин",
+        "brief": "Kotlin; Claude абонамент като ACP агент в самото IDE.",
+        "description": "Плъгин в JetBrains Marketplace (Kotlin), който добавя Claude Subscription (Pro/Max) ACP агент към AI Assistant — позволява използването на Claude абонамент директно в средите за разработка на JetBrains."
+      },
+      {
+        "url": "https://addons.sylius.com/en_US/products/vanssa-sylius-slider",
+        "github": "https://github.com/vanssata/sylius-slider-plugin",
+        "name": "Vanssa Sylius Slider",
+        "brief": "публикуван Sylius 2 плъгин, разработен spec-first; PHPUnit, Behat, Playwright, GitHub Actions CI.",
+        "description": "Многофункционален responsive слайдер плъгин за Sylius 2, публикуван в официалния Sylius Addons магазин — слайдове с изображения и видео с превод на няколко езика, преглед на живо в админ панела, Symfony UX рендиране, Twig Hooks и опционални CMS интеграции. Тестван с PHPUnit, Behat и Playwright; CI в GitHub Actions. Разработен през моя agentic SDLC процес по спецификации, написани от мен, с преглед на всеки план, тест и diff преди merge."
+      },
+      {
+        "url": "https://breezy-bg.com",
+        "name": "breezy-bg.com",
+        "short": false,
+        "brief": "Shopware 6.5 магазин със собствени модули за количка/checkout и тема, поддържан от край до край.",
+        "description": "E-commerce платформа върху Shopware 6.5 със собствени модули, които изцяло променят концепцията на количката и checkout процеса. Съобразена с изискванията на българското законодателство за електронна търговия. Работи със собствена storefront тема: Twig шаблони, SCSS, JavaScript storefront плъгини и конфигурация на темата в админ панела."
+      },
+      {
+        "url": "https://vanssata.github.io/",
+        "github": "https://github.com/vanssata/vanssata.github.io",
+        "name": "vanssata.github.io — тази автобиография",
+        "short": false,
+        "description": "Single-page CV на Vue 3 + Bootstrap 5 с runtime i18n (EN/BG), тъмна тема и оптимизиран за печат PDF експорт. Започнат изцяло на ръка писан чист код, впоследствие мигриран към AI-подпомогнат работен процес — Claude Code със специфични за проекта skills, hooks и MCP tooling."
+      }
+    ]
+  },
+  "projects": [
+    {
+      "url": "https://b2b.solvex.bg",
+      "name": "b2b.solvex.bg",
+      "brief": "резервации за 1 200+ хотела, ~50 GB/ден SOAP данни",
+      "description": "B2B/B2C платформа за резервации и управление на хотели с 1 200+ обекта и ~50 GB/ден данни в реално време, обработвани от SOAP услуги."
+    },
+    {
+      "url": "https://bigmarket.bg/",
+      "name": "bigmarket.bg",
+      "description": "B2B платформа за едро на канцеларски материали и офис консумативи, изградена на Magento 2 — обслужва дистрибутори с инвентар в реално време от 10+ склада."
+    },
+    {
+      "url": "https://abrites.com",
+      "name": "abrites.com",
+      "description": "Глобална e-commerce платформа за автомобилна диагностика — повече детайли в раздел „Професионален опит“ (Abrites LTD)."
+    },
+    {
+      "url": "https://hermesbooks.bg/",
+      "name": "hermesbooks.bg",
+      "description": "Онлайн книжарница на Хермес — най-голямата верига книжарници в България с 12 обекта в страната — изградена на Magento 2 с книги, канцеларски материали и културни събития."
+    },
+    {
+      "url": "https://joya.bg/",
+      "name": "officemarket.bg / joya.bg",
+      "description": "Retail e-commerce за офис и канцеларски продукти (сестринска платформа на BigMarket), изградена на Magento 2 с изцяло персонализиран B2B/B2C бизнес модел."
+    },
+    {
+      "url": "https://www.bittel.bg",
+      "name": "bittel.bg",
+      "description": "E-commerce и продуктов каталог на Bittel Ltd — официален вносител за България на Daikin, Toshiba, Panasonic, Alcatel и др. в климатизация, слънчева техника и телекоми."
+    },
+    {
+      "url": "https://www.nippon.bg",
+      "name": "nippon.bg",
+      "description": "Онлайн магазин за марката Nippon (слънчеви колектори, климатици, домофони) — българска марка, собственост на Bittel Ltd, разпространявана в цяла Европа."
+    },
+    {
+      "url": "https://ndk.bg/",
+      "name": "ndk.bg",
+      "description": "Сайт на НДК (Национален дворец на културата) — най-големият многофункционален конгресен и изложбен център в Югоизточна Европа, София."
+    },
+    {
+      "url": "https://thelearningedge.net",
+      "name": "thelearningedge.net",
+      "description": "Корпоративен презентационен сайт, изграден като демонстрация на персонализиран фреймуорк на Symfony 2."
+    },
+    {
+      "url": "https://indeavr.com",
+      "name": "indeavr.com",
+      "description": "Корпоративен сайт на INDEAVR — българска компания за технологични услуги, специализирана в дигитална трансформация, наука за данни, облак и AI решения."
+    },
+    {
+      "url": "https://arteks.net",
+      "name": "arteks.net",
+      "description": "Корпоративен сайт на Артекс Инженеринг — българска архитектурно-строителна компания в сегмента на луксозните имоти."
+    },
+    {
+      "url": "https://coloreffect.bg",
+      "name": "coloreffect.bg",
+      "description": "Интериорен дизайн на луксозни системи за слънцезащита за прозорци и фасади."
+    }
+  ]
+}

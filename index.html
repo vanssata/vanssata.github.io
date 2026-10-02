@@ -273,7 +273,10 @@
           </aside>
 
           <!-- ── Main ──────────────────────────────────────── -->
-          <main class="col-lg-8 cv-main p-4">
+          <main
+            class="col-lg-8 cv-main p-4"
+            :class="{ 'experience-first': t.layout?.experienceFirst }"
+          >
             <!-- Profile -->
             <section id="profile" class="mb-4" v-if="t.summary">
               <h2 class="section-title">{{ t.sections.profile }}</h2>
@@ -287,6 +290,7 @@
                 v-for="job in t.experience"
                 :key="job.company"
                 class="experience-item mb-4"
+                :class="{ 'cut-header-only': job.short === 0 }"
               >
                 <div class="text-muted small">{{ job.period }}</div>
                 <h3 class="fs-6 fw-bold mb-1">
@@ -315,6 +319,7 @@
                     v-for="(para, i) in job.description"
                     :key="i"
                     class="mb-1"
+                    :class="{ 'cut-drop': job.short != null && i >= job.short }"
                   >
                     {{ para }}
                   </li>
@@ -337,7 +342,7 @@
                   v-for="project in t.personalProjects.items"
                   :key="project.url"
                 >
-                  <dt>
+                  <dt :class="{ 'cut-drop': project.short === false }">
                     <a
                       :href="project.url"
                       target="_blank"
@@ -346,6 +351,9 @@
                       >{{ project.name }}</a
                     >
                     <span class="print-only">{{ project.name }}</span>
+                    <span v-if="project.brief" class="cut-only project-brief">
+                      — {{ project.brief }}</span
+                    >
                     <a
                       v-if="project.github"
                       :href="project.github"
@@ -369,7 +377,12 @@
             <!-- Skills -->
             <section id="skills" class="mb-4">
               <h2 class="section-title">{{ t.sections.skills }}</h2>
-              <div v-for="(category, key) in t.skills" :key="key" class="mb-3">
+              <div
+                v-for="(category, key) in t.skills"
+                :key="key"
+                class="mb-3"
+                :class="{ 'cut-drop': category.short === false }"
+              >
                 <h3 class="fs-6 fw-semibold mb-2">{{ category.title }}</h3>
                 <div
                   v-for="group in category.groups"
@@ -417,7 +430,7 @@
               <h2 class="section-title">{{ t.sections.projects }}</h2>
               <dl class="projects-list mb-0">
                 <template v-for="project in t.projects" :key="project.url">
-                  <dt>
+                  <dt :class="{ 'cut-drop': project.short === false }">
                     <a
                       :href="project.url"
                       target="_blank"
@@ -426,6 +439,9 @@
                       >{{ project.name }}</a
                     >
                     <span class="print-only">{{ project.name }}</span>
+                    <span v-if="project.brief" class="cut-only project-brief">
+                      — {{ project.brief }}</span
+                    >
                   </dt>
                   <dd v-if="project.description" class="small text-muted">
                     {{ project.description }}
